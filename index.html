@@ -790,6 +790,16 @@ function go(page){
     target.classList.add("active");
   }
 
+// 🔥 FIX NAV ACTIVE STATE
+  document.querySelectorAll(".nav-links button").forEach(function(btn){
+    btn.classList.remove("active");
+  });
+
+  var activeBtn = document.getElementById("nav-" + page);
+  if(activeBtn){
+    activeBtn.classList.add("active");
+  }
+
   // 🔥 FIX: scroll to top
   window.scrollTo(0, 0);
 }
