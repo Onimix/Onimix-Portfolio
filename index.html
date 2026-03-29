@@ -109,12 +109,31 @@
     .btn.ghost{background:var(--card); border:1px solid var(--border); color:var(--text);}
     .btn:hover{opacity:.95;}
     
-    .footer{
-  text-align:center;
-  font-size:12px;
-  color:#888;
-  margin-top:20px;
+    .transform{
+  margin-top:50px;
 }
+
+.transform-img img{
+  width:100%;
+  border-radius:24px;
+  object-fit:cover;
+}
+
+.steps{
+  margin-top:15px;
+  display:grid;
+  gap:8px;
+  font-size:14px;
+}
+
+.steps p{
+  background:var(--card);
+  padding:10px 14px;
+  border-radius:14px;
+  border:1px solid var(--border);
+}
+    
+
 
     /* SECTIONS */
     .section{
@@ -224,12 +243,72 @@
     }
     .filters button.active{background:var(--grad); color:white; border-color:transparent;}
 
+.cta{
+  margin-top:40px;
+  padding:50px 20px;
+  border-radius:30px;
+  text-align:center;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  border:1px solid var(--border);
+}
+
+.cta-inner h2{
+  font-size:28px;
+  font-weight:900;
+}
+
+.cta-inner p{
+  margin-top:10px;
+  color:var(--muted);
+}
+
+.cta-buttons{
+  margin-top:20px;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
     .footer{
-      border-top:1px solid var(--border);
-      padding:34px 0;
-      background:rgba(0,0,0,.45);
-    }
-    .footer p{color:var(--muted); font-size:13px; line-height:1.7;}
+  margin-top:50px;
+  padding:40px 0;
+  background:rgba(0,0,0,.6);
+  border-top:1px solid var(--border);
+}
+
+.footer .grid{
+  gap:30px;
+}
+
+.footer h3{
+  font-size:16px;
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.footer h4{
+  font-size:14px;
+  font-weight:800;
+  margin-bottom:10px;
+  color:var(--muted);
+}
+
+.footer p{
+  font-size:13px;
+  color:var(--muted2);
+  line-height:1.6;
+  margin:4px 0;
+  cursor:pointer;
+}
+
+.footer p:hover{
+  color:var(--text);
+}
+
+.footer .btn{
+  margin-top:10px;
+}
   </style>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
@@ -318,7 +397,7 @@
 
           <h1 class="title">Hello, I’m Amuda Oluwaferanmi</h1>
           <p style="margin-top:10px; font-weight:800; color:rgba(255,255,255,.80);">
-            Graphics Designer • Web Developer • E-book Writer
+            Brand Designer ➝ Graphics Designer • Web Developer • E-book Writer
           </p>
           <p class="subtitle">
             I help brands attract paying clients through converting designs, modern websites,
@@ -439,6 +518,38 @@
   </div>
 </section>
 
+<div class="transform">
+  <div class="grid two">
+
+    <!-- IMAGE SIDE -->
+    <div class="transform-img">
+      <img src="me.png" alt="Brand Transformation">
+    </div>
+
+    <!-- TEXT SIDE -->
+    <div>
+      <span class="badge">My Process</span>
+      <h2 class="title" style="font-size:28px;">
+        Here’s how I’ll transform your brand
+      </h2>
+
+      <p class="subtitle">
+        If I was hired as your Brand designer (Graphics Designer + Web Developer), this is how I take your brand from average to premium:
+      </p>
+
+      <div class="steps">
+        <p>✔ Designing or refining your logo</p>
+        <p>✔ Building a strong, memorable brand identity</p>
+        <p>✔ Developing a premium, high-converting website</p>
+        <p>✔ Creating communicative flyers & social media ads</p>
+        <p>✔ Showcasing your business to attract clients</p>
+        <p>✔ Managing and improving your online presence</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <section class="fade-in" style="margin-top:80px;">
   <h2 class="title" style="font-size:28px;">Client Reviews</h2>
 
@@ -496,6 +607,22 @@
 
       <div id="designGrid" class="grid three"></div>
     </div>
+    
+    <div class="cta">
+  <div class="cta-inner">
+    
+    <h2>Have a Project in Mind?</h2>
+    <p>Let’s bring your vision to life. Contact me today and get a premium result.</p>
+
+    <div class="cta-buttons">
+      <a href="https://wa.me/2348169518870?text=Hi%20AF%20Creative%2C%20I%20want%20to%20start%20a%20project" target="_blank" class="btn primary">
+        🚀 Start Your Project
+      </a>
+
+    </div>
+
+  </div>
+</div>
   </section>
 
   <!-- WEB -->
@@ -513,6 +640,21 @@
 
       <div id="webGrid" class="grid three"></div>
     </div>
+    <div class="cta">
+  <div class="cta-inner">
+    
+    <h2>Have a Project in Mind?</h2>
+    <p>Let’s bring your vision to life. Contact me today and get a premium result.</p>
+
+    <div class="cta-buttons">
+      <a href="https://wa.me/2348169518870?text=Hi%20AF%20Creative%2C%20I%20want%20to%20start%20a%20project" target="_blank" class="btn primary">
+        🚀 Start Your Project
+      </a>
+
+    </div>
+
+  </div>
+</div>
   </section>
 
   <!-- EBOOKS -->
@@ -528,6 +670,21 @@
 
       <div id="ebookGrid" class="grid four"></div>
     </div>
+    <div class="cta">
+  <div class="cta-inner">
+    
+    <h2>Have a Project in Mind?</h2>
+    <p>Let’s bring your vision to life. Contact me today and get a premium result.</p>
+
+    <div class="cta-buttons">
+      <a href="https://wa.me/2348169518870?text=Hi%20AF%20Creative%2C%20I%20want%20to%20start%20a%20project" target="_blank" class="btn primary">
+        🚀 Start Your Project
+      </a>
+
+    </div>
+
+  </div>
+</div>
   </section>
 
   <!-- CONTACT -->
@@ -581,14 +738,39 @@
 
   <!-- FOOTER -->
   <div class="footer">
-    <div class="container">
-      <p><b style="color:white;">AFCREATIVE DESIGN</b> — Let your brand stand out with premium designs.</p>
-      <p style="margin-top:8px;">
-  Developed by AFCREATIVE DESIGN || Amuda Oluwaferanmi
-</p>
-</div>
-      <p style="margin-top:10px;">© <span id="year"></span> All rights reserved.</p>
+  <div class="container">
+    <div class="grid three">
+
+      <div>
+        <h3>AFCREATIVE DESIGN</h3>
+        <p>Your trusted creative partner. I help brands grow through design, websites, and digital presence.</p>
+      </div>
+
+      <div>
+        <h4>Brand Designer</h4>
+        <p onclick="go('#')">Available for work</p>
+        <p onclick="go('#')">Competent</p>
+        <p onclick="go('#')">Web</p>
+        <p onclick="go('#')">E-books</p>
+        <p onclick="go('#')">Contact</p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>📞 +2348169518870</p>
+        <p>📧 amudaoluwaferanmi@gmail.com</p>
+        <a href="https://wa.me/2348169518870" target="_blank" class="btn primary">
+          WhatsApp Me
+        </a>
+      </div>
+
     </div>
+
+    <p style="margin-top:20px; text-align:center;">
+      © <span id="year"></span> AFCREATIVE DESIGN. All rights reserved.
+    </p>
+  </div>
+</div>
   </div>
 
   <script>
@@ -601,17 +783,15 @@ function go(page){
   document.querySelectorAll(".section").forEach(function(s){
     s.classList.remove("active");
   });
+
   // show selected section
   var target = document.getElementById(page);
   if(target){
     target.classList.add("active");
   }
-  // track website section safely
-  if (typeof gtag === "function") {
-  gtag("event", "section_view", {
-    section_name: page
-  });
-}
+
+  // 🔥 FIX: scroll to top
+  window.scrollTo(0, 0);
 }
 
     // DATA
