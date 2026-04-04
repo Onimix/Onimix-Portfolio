@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - AFCreative Design</title>
+
+  <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <button class="logo" onclick="go('home')">
+          <span class="dot"></span>
+          AFCREATIVE DESIGN
+        </button>
+
+        <div class="nav-links">
+<a href="index.html">Home</a>
+<a href="design.html">Design</a>
+<a href="web.html">Web</a>
+<a href="ebook.html">E-books</a>
+<a href="contact.html" class="active">Contact</a>
+        </div>
+
+        <a class="btn primary" target="_blank"
+          href="https://wa.me/2348169518870?text=Hi%20AF%20Creative%2C%20I%20want%20to%20work%20with%20you" 
+          onclick="gtag('event','whatsapp_click',{
+  event_category:'engagement',
+  event_label:'whatsapp_button'
+})">
+          Let’s Talk
+        </a>
+      </div>
+    </div>
+  </div>
+
+ <section class="contact-section">
+  <div class="container">
+
+    <span class="badge">Contact</span>
+    <h2 class="title">Let’s Build Something Powerful</h2>
+    <p class="subtitle">
+      Ready to elevate your brand? Send a message and let’s get started.
+    </p>
+
+    <div class="contact-grid">
+
+      <!-- LEFT (INFO) -->
+      <div class="contact-info">
+        <div class="info-card">
+          <p class="h3">Direct Contact</p>
+
+          <p><b>Phone:</b> +2348169518870</p>
+          <p><b>Email:</b> amudaoluwaferanmi@gmail.com</p>
+          <p><b>Location:</b> Nigeria</p>
+
+          <div class="contact-buttons">
+            <a href="https://wa.me/2348169518870?text=Hi%20AF%20Creative%2C%20I%20need%20your%20service"
+               target="_blank"
+               class="btn primary">
+              WhatsApp
+            </a>
+
+            <a href="mailto:amudaoluwaferanmi@gmail.com" class="btn ghost">
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT (FORM) -->
+      <div class="contact-form">
+        <p class="h3">Start a Project</p>
+        <p class="muted">Your message will be sent directly to WhatsApp</p>
+
+        <div class="form-group">
+          <input id="name" placeholder="Your Name">
+          <input id="service" placeholder="Service (Design, Web, E-book)">
+          <textarea id="message" placeholder="Tell me about your project..."></textarea>
+        </div>
+
+        <button onclick="sendMessage()" class="btn primary full">
+          🚀 Send Message
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- FOOTER -->
+   <div class="footer">
+  <div class="container">
+    <div class="grid three">
+
+      <div>
+        <h3>AFCREATIVE DESIGN</h3>
+        <p>Your trusted creative partner. Grow your business through transforming design, websites, and digital presence.</p>
+      </div>
+
+      <div>
+        <h4>Brand Designer</h4>
+        <p>Trusted</p>
+        <p>Available for work</p>
+        <p>Competent</p>
+        <p>View Service Plan</p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>📞 +2348169518870</p>
+        <p>📧 amudaoluwaferanmi@gmail.com</p>
+        <a href="https://wa.me/2348169518870" target="_blank" class="btn primary">
+          WhatsApp Me
+        </a>
+      </div>
+
+    </div>
+
+    <p style="margin-top:20px; text-align:center;">
+      © <span id="year"></span> AFCREATIVE DESIGN. All rights reserved.
+    </p>
+  </div>
+</div>
+  </div>
+  <script src="design.js"></script>
+  <script>
+function sendMessage() {
+  let name = document.getElementById("name").value;
+  let service = document.getElementById("service").value;
+  let message = document.getElementById("message").value;
+
+  let phoneNumber = "2348169518870"; // replace with your WhatsApp number
+
+  let text = `Hello, my name is ${name}%0A
+Service: ${service}%0A
+Project Details: ${message}`;
+
+  let url = `https://wa.me/${phoneNumber}?text=${text}`;
+
+  window.open(url, "_blank");
+}
+if (!name || !service || !message) {
+  alert("Please fill all fields");
+  return;
+}
+</script>
+</body>
+</html>
