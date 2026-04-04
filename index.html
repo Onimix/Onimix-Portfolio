@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AF Creative Portfolio</title>
   
-  <!-- Google tag (gtag.js) -->  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QWT00QE9L"></script> 
+  <!-- Google tag (gtag.js) -->  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QWT00QE9L"></script> 
   <script>  
   window.dataLayer = window.dataLayer || [];  
   function gtag(){dataLayer.push(arguments);}  
@@ -73,23 +74,33 @@
     }
     .dot{height:10px; width:10px; border-radius:999px; background:var(--grad);}
     .nav-links{
-      display:flex; gap:8px; flex-wrap:wrap;
-    }
-    .nav-links button{
-      padding:10px 14px;
-      border-radius:999px;
-      font-weight:700;
-      font-size:13px;
-      color:var(--muted);
-      border:1px solid transparent;
-      transition:.2s;
-    }
-    .nav-links button:hover{background:var(--card); color:var(--text);}
-    .nav-links button.active{
-      background:var(--grad);
-      color:white;
-    }
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
 
+/* 🔥 Apply to links now */
+.nav-links a{
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:13px;
+  color:var(--muted);
+  border:1px solid transparent;
+  transition:.2s;
+}
+
+/* Hover */
+.nav-links a:hover{
+  background:var(--card);
+  color:var(--text);
+}
+
+/* Active page */
+.nav-links a.active{
+  background:var(--grad);
+  color:white;
+}
     .btn{
       padding:12px 16px;
       border-radius:999px;
@@ -181,19 +192,19 @@
   .grid.four{grid-template-columns:repeat(4, 1fr);}
 }
 
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:26px;
-      padding:16px;
-      box-shadow:0 20px 50px rgba(0,0,0,.35);
-     transition: all 0.3s ease;
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:26px;
+  padding:16px;
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+  transition: all 0.3s ease;
+}
+
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0,0,0,.25);
 }
-    }
-
     .media{
       border-radius:18px;
       border:1px solid var(--border);
@@ -363,11 +374,11 @@
         </button>
 
         <div class="nav-links">
-          <button id="nav-home" class="active" onclick="go('home')">Home</button>
-          <button id="nav-design" onclick="go('design')">Design</button>
-          <button id="nav-web" onclick="go('web')">Web</button>
-          <button id="nav-ebooks" onclick="go('ebooks')">E-books</button>
-          <button id="nav-contact" onclick="go('contact')">Contact</button>
+         <a href="index.html" class="active">Home</a>
+<a href="design.html">Design</a>
+<a href="web.html">Web</a>
+<a href="ebooks.html">E-books</a>
+<a href="contact.html">Contact</a>
         </div>
 
         <a class="btn primary" target="_blank"
@@ -402,6 +413,7 @@
           <p class="subtitle">
             I help brands attract paying clients through converting designs, modern websites,
             and professional e-books.
+            </p>
             <p class="muted" style="margin-top:14px;"> Over the years, I’ve worked on logos, business flyers, social media ads,
         portfolio websites, landing pages, and professional e-book formatting.
         My goal is simple — clean design, strong branding, and results.
@@ -411,13 +423,13 @@
       </p>
           </p>
 
-          <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
-            <button class="btn primary" onclick="go('contact')">Contact me</button>
-            <button class="btn ghost" onclick="go('design')">View Designs</button>
-            <button class="btn ghost" onclick="go('web')">View Websites</button>
-            <button class="btn ghost" onclick="go('ebooks')">View Ebooks</button>
-          </div>
+          <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;"> 
 
+<a href="contact.html" class="btn primary" class="active">Contact Me</a>
+<a href="design.html" class="btn ghost">View Designs</a>
+<a href="web.html" class="btn ghost">View Websites</a>
+<a href="ebook.html" class="btn ghost">View E-books</a>
+        </div>
         </div>
 
         <div class="card">
@@ -437,7 +449,7 @@
 
             <p class="small" style="margin-top:12px;">Email Address</p>
             <a class="muted" target="_blank" href="amudaoluwaferanmi@gmail.com">
-              amudaoluwaferanmi@gmai.com
+              amudaoluwaferanmi@gmail.com
             </a>
              <a style="margin-top:16px;" class="small">
             Nigeria
@@ -521,11 +533,6 @@
 <div class="transform">
   <div class="grid two">
 
-    <!-- IMAGE SIDE -->
-    <div class="transform-img">
-      <img src="me.png" alt="Brand Transformation">
-    </div>
-
     <!-- TEXT SIDE -->
     <div>
       <span class="badge">My Process</span>
@@ -546,6 +553,8 @@
         <p>✔ Managing and improving your online presence</p>
       </div>
     </div>
+
+
 
   </div>
 </div>
@@ -593,7 +602,6 @@
       <div class="search">
         <input id="designSearch" placeholder="Search designs (logo, flyer, branding...)" onkeyup="renderDesigns()" />
       </div>
-
       <div class="filters">
         <button class="active" onclick="setDesignFilter('All')">All</button>
         <button onclick="setDesignFilter('Logo')">Logo</button>
@@ -692,7 +700,7 @@
     <div class="container">
       <span class="badge">Contact</span>
       <h2 class="title" style="font-size:28px;">Let’s work together</h2>
-      <p class="subtitle">Send a message on WhatsApp or email. I reply fast.</p>
+      <p class="subtitle">Send a message on WhatsApp or email.</p>
 
       <div class="grid two">
         <div class="card">
@@ -710,7 +718,7 @@
 })">
               WhatsApp
             </a>
-            <a class="btn ghost" href="mailto:amudaoluwaferanmi@gmai.com">Email</a>
+            <a class="btn ghost" href="mailto:amudaoluwaferanmi@gmail.com">Email</a>
           </div>
         </div>
 
@@ -743,16 +751,15 @@
 
       <div>
         <h3>AFCREATIVE DESIGN</h3>
-        <p>Your trusted creative partner. I help brands grow through design, websites, and digital presence.</p>
+        <p>Your trusted creative partner. Grow your business through transforming design, websites, and digital presence.</p>
       </div>
 
       <div>
         <h4>Brand Designer</h4>
+        <p>Trusted</p>
         <p>Available for work</p>
         <p>Competent</p>
-        <p>Web</p>
-        <p>E-books</p>
-        <p>Contact</p>
+        <p>View Service Plan</p>
       </div>
 
       <div>
@@ -804,7 +811,7 @@ function go(page){
   window.scrollTo(0, 0);
 }
 
-    // DATA
+    // DATA 
     const designs = [
     {title:"AFCREATIVE DESIGN", type:"Logo", year:"2024", img:"mylogo2.png"},
    {title:"Minimal Bakery Logo", type:"Logo", year:"2026", img:"logo1.jpg"},
