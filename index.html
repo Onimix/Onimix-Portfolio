@@ -1,331 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amuda Oluwaferanmi Creative Portfolio</title>
-  
-  <!-- Google tag (gtag.js) -->  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QWT00QE9L"></script> 
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AFCREATIVE DESIGN – Amuda Oluwaferanmi</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0QWT00QE9L"></script> 
   <script>  
   window.dataLayer = window.dataLayer || [];  
   function gtag(){dataLayer.push(arguments);}  
   gtag('js', new Date());  
   
-  gtag('config', 'G-0QWT00QE9L');  
+  gtag('config', 'G-79SZRQ8X8Q');  
 </script>
+  
+<style>
+  :root{
+    --bg:#07070a;
+    --card:rgba(255,255,255,.05);
+    --border:rgba(255,255,255,.10);
+    --text:rgba(255,255,255,.92);
+    --muted:rgba(255,255,255,.60);
+    --muted2:rgba(255,255,255,.45);
+    --grad: linear-gradient(90deg, #8b5cf6, #d946ef);
+    --purple:#8b5cf6;
+    --pink:#d946ef;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;}
 
-  <style>
-    :root{
-      --bg:#07070a;
-      --card:rgba(255,255,255,.05);
-      --border:rgba(255,255,255,.10);
-      --text:rgba(255,255,255,.92);
-      --muted:rgba(255,255,255,.60);
-      --muted2:rgba(255,255,255,.45);
-      --grad: linear-gradient(90deg, #8b5cf6, #d946ef);
-    }
+  /* ── NAV ── */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:999;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 6%;
+    background:rgba(7,7,10,.85);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+  }
+  .logo{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+  .nav-links{display:flex;gap:32px;list-style:none;}
+  .nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500;transition:.2s;}
+  .nav-links a:hover{color:var(--text);}
+  .nav-cta{
+    background:var(--grad);color:#fff;border:none;padding:10px 24px;
+    border-radius:8px;font-weight:600;font-size:.9rem;cursor:pointer;text-decoration:none;
+    transition:opacity .2s;
+  }
+  .nav-cta:hover{opacity:.85;}
 
-    *{box-sizing:border-box; margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;}
-    body{background:var(--bg); color:var(--text);}
+  /* ── HERO ── */
+  #hero{
+    min-height:100vh;display:flex;align-items:center;
+    padding:120px 6% 80px;position:relative;overflow:hidden;
+  }
+  .hero-glow{
+    position:absolute;top:-120px;right:-80px;
+    width:550px;height:550px;
+    background:radial-gradient(circle, rgba(139,92,246,.25) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .hero-glow2{
+    position:absolute;bottom:-100px;left:-60px;
+    width:400px;height:400px;
+    background:radial-gradient(circle, rgba(217,70,239,.15) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .hero-content{max-width:700px;position:relative;z-index:1;}
+  .hero-eyebrow{
+    display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--purple);
+    border:1px solid rgba(139,92,246,.35);padding:6px 16px;border-radius:100px;
+    margin-bottom:28px;
+  }
+  .hero-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:800;line-height:1.07;margin-bottom:10px;}
+  .hero-title .grad{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+  .hero-role{font-size:clamp(1.2rem,2.5vw,1.6rem);color:var(--muted);font-weight:400;margin-bottom:24px;}
+  .hero-desc{color:var(--muted);line-height:1.75;max-width:520px;margin-bottom:40px;font-size:.97rem;}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--grad);color:#fff;padding:14px 32px;border-radius:10px;
+    font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .2s,opacity .2s;
+  }
+  .btn-primary:hover{transform:translateY(-2px);opacity:.9;}
+  .btn-ghost{
+    border:1px solid var(--border);color:var(--text);padding:14px 32px;border-radius:10px;
+    font-weight:600;text-decoration:none;font-size:.95rem;transition:.2s;
+  }
+  .btn-ghost:hover{border-color:var(--purple);color:var(--purple);}
+  .hero-stats{display:flex;gap:40px;margin-top:56px;flex-wrap:wrap;}
+  .stat-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:2rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+  .stat-label{font-size:.82rem;color:var(--muted2);margin-top:2px;}
 
-    a{color:inherit; text-decoration:none}
-    button{cursor:pointer; border:none; background:none; color:inherit}
+  /* ── SECTION SHELL ── */
+  section{padding:100px 6%;}
+  .section-eyebrow{
+    font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--purple);font-weight:600;margin-bottom:8px;
+  }
+  .section-title{
+    font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;
+    line-height:1.1;
+  }
+  .section-title .bg-label{
+    position:absolute;right:0;top:50%;transform:translateY(-50%);
+    font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(3rem,7vw,6rem);font-weight:800;
+    color:rgba(255,255,255,.04);white-space:nowrap;pointer-events:none;
+    text-transform:uppercase;
+  }
+  .section-head{position:relative;margin-bottom:60px;}
 
-    .container{
-  width: 92%;
-  max-width: 1400px;
-  margin: auto;
-  padding: 0 20px;
-}
+  /* ── ABOUT ── */
+  #about{background:rgba(255,255,255,.015);}
+  .about-inner{display:flex;gap:60px;align-items:flex-start;flex-wrap:wrap;}
+  .about-photo{
+    width:280px;min-width:220px;border-radius:20px;overflow:hidden;
+    border:1px solid var(--border);flex-shrink:0;
+    aspect-ratio:3/4;
+  }
+  .about-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+  .about-text{flex:1;min-width:280px;}
+  .about-text h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:12px;}
+  .about-text p{color:var(--muted);line-height:1.8;margin-bottom:18px;font-size:.95rem;}
+  .about-tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px;}
+  .tag{
+    background:var(--card);border:1px solid var(--border);
+    padding:6px 14px;border-radius:100px;font-size:.8rem;color:var(--muted);
+  }
 
-   /* Fade-in animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
+  /* horizontal scroll track */
+  .hscroll-wrap{
+    overflow-x:auto;padding-bottom:16px;
+    scrollbar-width:thin;scrollbar-color:rgba(139,92,246,.4) transparent;
+  }
+  .hscroll-wrap::-webkit-scrollbar{height:4px;}
+  .hscroll-wrap::-webkit-scrollbar-track{background:transparent;}
+  .hscroll-wrap::-webkit-scrollbar-thumb{background:rgba(139,92,246,.4);border-radius:4px;}
+  .hscroll-track{display:flex;gap:24px;width:max-content;padding:4px 2px;}
 
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+  /* about cards */
+  .about-card{
+    background:var(--card);border:1px solid var(--border);border-radius:16px;
+    padding:28px 24px;min-width:220px;
+  }
+  .about-card .num{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.2rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+  .about-card p{font-size:.83rem;color:var(--muted2);margin-top:4px;}
+  .social-row{display:flex;gap:14px;margin-top:24px;}
+  .social-icon{
+    width:40px;height:40px;border-radius:10px;border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--muted);text-decoration:none;font-size:1rem;transition:.2s;
+  }
+  .social-icon:hover{border-color:var(--purple);color:var(--purple);}
 
-    /* NAV */
-    .nav{
-      position:sticky; top:0; z-index:99;
-      background:rgba(0,0,0,.65);
-      backdrop-filter: blur(12px);
-      border-bottom:1px solid var(--border);
-    }
-    .nav-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:12px;
-    }
-    .logo{
-      display:flex; align-items:center; gap:10px;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:var(--card);
-      font-weight:800;
-      font-size:13px;
-    }
-    .dot{height:10px; width:10px; border-radius:999px; background:var(--grad);}
+  /* ── SERVICES ── */
+  #services{}
+  .service-card{
+    background:var(--card);border:1px solid var(--border);border-radius:20px;
+    padding:36px 28px;min-width:280px;max-width:300px;
+    transition:border-color .25s,transform .25s;position:relative;overflow:hidden;
+  }
+  .service-card::before{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(135deg,rgba(139,92,246,.08),rgba(217,70,239,.04));
+    opacity:0;transition:.3s;
+  }
+  .service-card:hover{border-color:rgba(139,92,246,.5);transform:translateY(-4px);}
+  .service-card:hover::before{opacity:1;}
+  .service-icon{
+    width:52px;height:52px;border-radius:14px;
+    background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.25);
+    display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:20px;
+  }
+  .service-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:12px;}
+  .service-card p{color:var(--muted);font-size:.88rem;line-height:1.75;margin-bottom:20px;}
+  .service-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+  .service-list li{display:flex;align-items:center;gap:8px;font-size:.83rem;color:var(--muted2);}
+  .service-list li::before{content:'✦';color:var(--purple);font-size:.6rem;}
+  .service-btn{
+    margin-top:24px;display:inline-block;padding:10px 22px;border-radius:8px;
+    background:var(--grad);color:#fff;font-size:.85rem;font-weight:600;text-decoration:none;
+    transition:opacity .2s;
+  }
+  .service-btn:hover{opacity:.85;}
+
+  /* ── RESUME ── */
+  #resume{background:rgba(255,255,255,.015);}
+  .resume-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;}
+  .resume-col h3{
+    font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;
+    text-transform:uppercase;letter-spacing:.08em;color:var(--purple);
+    margin-bottom:24px;padding-bottom:10px;border-bottom:1px solid var(--border);
+  }
+  .resume-item{margin-bottom:24px;}
+  .resume-item .role{font-weight:600;font-size:.95rem;margin-bottom:4px;}
+  .resume-item .company{color:var(--purple);font-size:.85rem;margin-bottom:2px;}
+  .resume-item .period{color:var(--muted2);font-size:.8rem;margin-bottom:6px;}
+  .resume-item .desc{color:var(--muted);font-size:.85rem;line-height:1.7;}
+  .skill-bar-row{margin-bottom:14px;}
+  .skill-bar-label{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);margin-bottom:6px;}
+  .skill-bar-bg{height:5px;background:rgba(255,255,255,.07);border-radius:10px;overflow:hidden;}
+  .skill-bar-fill{height:100%;border-radius:10px;background:var(--grad);transition:width 1s ease;}
+  .lang-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;}
+  .lang-pill{
+    padding:6px 14px;border-radius:100px;font-size:.78rem;font-weight:600;
+    border:1px solid rgba(139,92,246,.4);color:var(--muted);
+  }
+  .missions-text{color:var(--muted);font-size:.88rem;line-height:1.8;}
+
+  /* ── PORTFOLIO ── */
+  #portfolio{}
+  .portfolio-tabs{display:flex;gap:12px;margin-bottom:48px;flex-wrap:wrap;}
+  .ptab{
+    padding:10px 24px;border-radius:100px;font-size:.88rem;font-weight:600;
+    border:1px solid var(--border);background:transparent;color:var(--muted);
+    cursor:pointer;transition:.2s;
+  }
+  .ptab.active{background:var(--grad);border-color:transparent;color:#fff;}
+  .ptab:hover:not(.active){border-color:var(--purple);color:var(--purple);}
+
+  .portfolio-panel{display:none;}
+  .portfolio-panel.active{display:block;}
+
+  /* Graphics collage */
+  .collage-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+    border-radius:20px;overflow:hidden;
+  }
+  .collage-cell{
+    aspect-ratio:1;background:var(--card);border:1px solid var(--border);
+    border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;
+    font-size:.78rem;color:var(--muted2);position:relative;
+  }
+  .collage-cell img{width:100%;height:100%;object-fit:cover;}
+  .collage-overlay{
+    position:absolute;inset:0;background:rgba(7,7,10,.6);
+    display:flex;align-items:center;justify-content:center;
+    opacity:0;transition:.2s;font-size:.8rem;color:#fff;font-weight:600;
+  }
+  .collage-cell:hover .collage-overlay{opacity:1;}
+
+  /* Website / Ebook showcase */
+  .showcase-card{
+    background:var(--card);border:1px solid var(--border);border-radius:20px;
+    overflow:hidden;max-width:680px;
+  }
+  .showcase-img{
+    width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,rgba(139,92,246,.2),rgba(217,70,239,.1));
+    display:flex;align-items:center;justify-content:center;color:var(--muted2);font-size:.85rem;
+    position:relative;overflow:hidden;
+  }
+  .showcase-img iframe{width:100%;height:100%;border:none;pointer-events:none;}
+  .showcase-body{padding:28px;}
+  .showcase-body h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:8px;}
+  .showcase-body p{color:var(--muted);font-size:.88rem;line-height:1.7;margin-bottom:20px;}
+  .showcase-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn-outline{
+    padding:10px 22px;border-radius:8px;border:1px solid var(--border);
+    color:var(--text);font-size:.85rem;font-weight:600;text-decoration:none;transition:.2s;
+  }
+  .btn-outline:hover{border-color:var(--purple);color:var(--purple);}
+
+  .portfolio-seemore{margin-top:24px;}
+
+  /* ── PRICING ── */
+  #pricing{background:rgba(255,255,255,.015);}
+  .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;}
+  .price-card{
+    background:var(--card);border:1px solid var(--border);border-radius:20px;
+    padding:36px 28px;position:relative;transition:.25s;
+  }
+  .price-card:hover{border-color:rgba(139,92,246,.4);}
+  .price-card.featured{border-color:rgba(139,92,246,.5);background:linear-gradient(145deg,rgba(139,92,246,.1),rgba(217,70,239,.05));}
+  .price-badge{
+    position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+    background:var(--grad);color:#fff;font-size:.72rem;font-weight:700;
+    padding:5px 18px;border-radius:0 0 10px 10px;letter-spacing:.06em;text-transform:uppercase;
+  }
+  .plan-name{font-size:.8rem;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:12px;}
+  .plan-price{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:800;margin-bottom:4px;}
+  .plan-price span{font-size:.9rem;font-weight:400;color:var(--muted);margin-left:4px;}
+  .plan-desc{font-size:.83rem;color:var(--muted2);margin-bottom:28px;}
+  .plan-features{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px;}
+  .plan-features li{display:flex;align-items:center;gap:10px;font-size:.87rem;color:var(--muted);}
+  .check{width:18px;height:18px;border-radius:50%;background:rgba(139,92,246,.2);
+    border:1px solid rgba(139,92,246,.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.55rem;color:var(--purple);}
+  .plan-btn{
+    width:100%;padding:13px;border-radius:10px;text-align:center;font-weight:700;
+    font-size:.9rem;text-decoration:none;display:block;transition:.2s;
+    border:1px solid var(--border);color:var(--text);
+  }
+  .price-card.featured .plan-btn{background:var(--grad);border-color:transparent;color:#fff;}
+  .plan-btn:hover{border-color:var(--purple);color:var(--purple);}
+  .price-card.featured .plan-btn:hover{opacity:.88;color:#fff;}
+
+  /* ── HIRE ── */
+  #hire{
+    text-align:center;
+    background:linear-gradient(135deg,rgba(139,92,246,.08),rgba(217,70,239,.06));
+    border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  }
+  #hire h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:16px;}
+  #hire p{color:var(--muted);max-width:520px;margin:0 auto 36px;line-height:1.75;font-size:.97rem;}
+
+  /* ── REVIEWS ── */
+  #reviews{}
+  .review-card{
+    background:var(--card);border:1px solid var(--border);border-radius:20px;
+    padding:28px 24px;min-width:300px;max-width:360px;
+  }
+  .stars{color:var(--purple);font-size:.9rem;letter-spacing:2px;margin-bottom:14px;}
+  .review-text{color:var(--muted);font-size:.88rem;line-height:1.75;margin-bottom:20px;}
+  .reviewer{display:flex;align-items:center;gap:12px;}
+  .reviewer-avatar{
+    width:42px;height:42px;border-radius:50%;
+    background:linear-gradient(135deg,#8b5cf6,#d946ef);
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;color:#fff;
+    flex-shrink:0;
+  }
+  .reviewer-name{font-weight:600;font-size:.9rem;}
+  .reviewer-role{font-size:.78rem;color:var(--muted2);}
+
+  /* ── BLOG ── */
+  #blog{background:rgba(255,255,255,.015);}
+  .blog-card{
+    background:var(--card);border:1px solid var(--border);border-radius:20px;
+    overflow:hidden;min-width:280px;max-width:320px;
+    transition:border-color .25s,transform .25s;
+  }
+  .blog-card:hover{border-color:rgba(139,92,246,.4);transform:translateY(-4px);}
+  .blog-img{
+    width:100%;height:160px;
+    background:linear-gradient(135deg,rgba(139,92,246,.25),rgba(217,70,239,.15));
+    display:flex;align-items:center;justify-content:center;font-size:2rem;
+  }
+  .blog-body{padding:22px;}
+  .blog-tag{font-size:.72rem;color:var(--purple);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;}
+  .blog-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;margin-bottom:8px;line-height:1.3;}
+  .blog-date{font-size:.78rem;color:var(--muted2);}
+
+  /* ── FOOTER ── */
+  footer{
+    padding:60px 6% 32px;
+    border-top:1px solid var(--border);
+  }
+  .footer-top{display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;margin-bottom:48px;}
+  .footer-brand .logo{font-size:1.5rem;display:block;margin-bottom:12px;}
+  .footer-brand p{color:var(--muted);font-size:.85rem;max-width:260px;line-height:1.7;}
+  .footer-col h4{font-weight:700;font-size:.9rem;margin-bottom:16px;}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .footer-col ul a{color:var(--muted);text-decoration:none;font-size:.85rem;transition:.2s;}
+  .footer-col ul a:hover{color:var(--purple);}
+  .footer-bottom{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+    padding-top:24px;border-top:1px solid var(--border);
+    font-size:.8rem;color:var(--muted2);
+  }
+  .footer-bottom a{color:var(--purple);text-decoration:none;}
+
+  /* ── CONTACT strip ── */
+  .contact-strip{
+    background:var(--bg);padding:16px 6%;
+    display:flex;align-items:center;gap:32px;flex-wrap:wrap;
+  }
+  .contact-item{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--muted);}
+  .contact-item a{color:var(--muted);text-decoration:none;transition:.2s;}
+  .contact-item a:hover{color:var(--purple);}
+  .contact-icon{font-size:1rem;}
+
+  /* SCROLL REVEAL */
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.visible{opacity:1;transform:none;}
+
+  /* mobile nav */
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
+  .hamburger span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s;}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  @media(max-width:768px){
     .nav-links{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-}
-
-/* 🔥 Apply to links now */
-.nav-links a{
-  padding:10px 14px;
-  border-radius:999px;
-  font-weight:700;
-  font-size:13px;
-  color:var(--muted);
-  border:1px solid transparent;
-  transition:.2s;
-}
-
-/* Hover */
-.nav-links a:hover{
-  background:var(--card);
-  color:var(--text);
-}
-
-/* Active page */
-.nav-links a.active{
-  background:var(--grad);
-  color:white;
-}
-    .btn{
-      padding:12px 16px;
-      border-radius:999px;
-      font-weight:800;
-      font-size:13px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      transition:.2s;
-      transition: all 0.3s ease;
-.btn:hover {
-  transform: scale(1.05);
-}
+      display:flex !important;flex-direction:column;gap:0;
+      position:fixed;top:65px;left:0;right:0;z-index:998;
+      background:rgba(7,7,10,.97);backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--border);
+      max-height:0;overflow:hidden;padding:0;
+      transition:max-height .35s ease,padding .35s ease;
     }
-    .btn.primary{background:var(--grad); color:white;}
-    .btn.ghost{background:var(--card); border:1px solid var(--border); color:var(--text);}
-    .btn:hover{opacity:.95;}
-    
-    .transform{
-  margin-top:50px;
-}
+    .nav-links.mobile-open{max-height:400px;padding:16px 0;}
+    .nav-links li a{display:block;padding:14px 6%;font-size:1rem;border-bottom:1px solid var(--border);color:var(--text);}
+    .nav-cta{display:none;}
+    .hamburger{display:flex;}
+    .about-inner{flex-direction:column;}
+    .about-photo{width:100%;min-width:auto;aspect-ratio:3/4;max-width:320px;margin:0 auto;}
+    .collage-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-top{flex-direction:column;gap:32px;}
+    .hero-stats{gap:28px;}
+  }
+</style>
 
-.transform-img img{
-  width:100%;
-  border-radius:24px;
-  object-fit:cover;
-}
-
-.steps{
-  margin-top:15px;
-  display:grid;
-  gap:8px;
-  font-size:14px;
-}
-
-.steps p{
-  background:var(--card);
-  padding:10px 14px;
-  border-radius:14px;
-  border:1px solid var(--border);
-}
-    
-
-
-    /* SECTIONS */
-    .section{
-  display:none;
-  padding:60px 0;
-}
-    .section.active{display:block;}
-
-    .badge{
-      display:inline-flex;
-      padding:7px 12px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:var(--card);
-      font-size:12px;
-      color:var(--muted);
-      font-weight:700;
-    }
-
-    .title{
-      font-size:34px;
-      font-weight:900;
-      line-height:1.1;
-      margin-top:10px;
-    }
-    .subtitle{
-      margin-top:10px;
-      color:var(--muted);
-      line-height:1.6;
-      font-size:14px;
-      max-width:650px;
-    }
-
-    .grid{
-      display:grid;
-      gap:14px;
-    }
-    .grid.two{grid-template-columns:1fr;}
-    .grid.three{grid-template-columns:1fr;}
-    .grid.four{grid-template-columns:1fr;}
-
-    @media(min-width:800px){
-  .grid.two{grid-template-columns:1.3fr .7fr;}
-  .grid.three{grid-template-columns:repeat(3, 1fr);}
-  .grid.four{grid-template-columns:repeat(4, 1fr);}
-}
-
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:26px;
-  padding:16px;
-  box-shadow:0 20px 50px rgba(0,0,0,.35);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,.25);
-}
-    .media{
-      border-radius:18px;
-      border:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(255,255,255,.10), transparent);
-      display:grid;
-      place-items:center;
-      color:rgba(255,255,255,.75);
-      font-weight:800;
-      font-size:12px;
-      overflow: hidden;
-    }
-
-    .small{font-size:12px; color:var(--muted2);}
-    .h3{font-weight:900; font-size:15px;}
-    .muted{color:var(--muted); font-size:13px; line-height:1.6;}
-
-    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
-
-    .search{
-      display:flex; gap:10px; align-items:center;
-      padding:12px 14px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:var(--card);
-      margin:18px auto;
-      max-width:620px;
-    }
-    .search input{
-      width:100%;
-      background:transparent;
-      border:none;
-      outline:none;
-      color:white;
-      font-size:13px;
-    }
-    .search input::placeholder{color:rgba(255,255,255,.30);}
-
-    .filters{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:18px;}
-    .filters button{
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:var(--card);
-      font-weight:800;
-      font-size:13px;
-      color:var(--muted);
-    }
-    .filters button.active{background:var(--grad); color:white; border-color:transparent;}
-
-.cta{
-  margin-top:40px;
-  padding:50px 20px;
-  border-radius:30px;
-  text-align:center;
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  border:1px solid var(--border);
-}
-
-.cta-inner h2{
-  font-size:28px;
-  font-weight:900;
-}
-
-.cta-inner p{
-  margin-top:10px;
-  color:var(--muted);
-}
-
-.cta-buttons{
-  margin-top:20px;
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-    .footer{
-  margin-top:50px;
-  padding:40px 0;
-  background:rgba(0,0,0,.6);
-  border-top:1px solid var(--border);
-}
-
-.footer .grid{
-  gap:30px;
-}
-
-.footer h3{
-  font-size:16px;
-  font-weight:900;
-  margin-bottom:10px;
-}
-
-.footer h4{
-  font-size:14px;
-  font-weight:800;
-  margin-bottom:10px;
-  color:var(--muted);
-}
-
-.footer p{
-  font-size:13px;
-  color:var(--muted2);
-  line-height:1.6;
-  margin:4px 0;
-  cursor:pointer;
-}
-
-.footer p:hover{
-  color:var(--text);
-}
-
-.footer .btn{
-  margin-top:10px;
-}
-  </style>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-analytics.js";
-  import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } 
-  from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
+  import {
+    getFirestore,
+    doc,
+    getDoc,
+    setDoc,
+    updateDoc,
+    increment
+  } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyC74ZuiTzZiHSdhOK2CdjhWOy0A2ICWV9E",
@@ -341,781 +427,640 @@
   const analytics = getAnalytics(app);
   const db = getFirestore(app);
 
-  // Visitor Counter
   const counterRef = doc(db, "siteData", "counter");
 
   async function updateCounter() {
-    const docSnap = await getDoc(counterRef);
+    try {
+      const docSnap = await getDoc(counterRef);
 
-    if (docSnap.exists()) {
-      await updateDoc(counterRef, {
-        visits: increment(1)
-      });
-    } else {
-      await setDoc(counterRef, {
-        visits: 1
-      });
+      if (docSnap.exists()) {
+        await updateDoc(counterRef, {
+          visits: increment(1)
+        });
+      } else {
+        await setDoc(counterRef, {
+          visits: 1
+        });
+      }
+    } catch (error) {
+      console.error("Counter error:", error);
     }
   }
 
   updateCounter();
 </script>
-</head>
 
+</head>
 <body>
 
-  <!-- NAVBAR -->
-  <div class="nav">
-    <div class="container">
-      <div class="nav-inner">
-        <button class="logo" onclick="go('home')">
-          <span class="dot"></span>
-          AFCREATIVE DESIGN
-        </button>
+<!-- NAV -->
+<nav>
+  <span class="logo">AFCREATIVE DESIGN</span>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="design.html" class="active">Design</a></li>
+    <li><a href="website.html">Websites</a></li>
+    <li><a href="ebook.html">Ebooks</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+  </ul>
+  <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" target="_blank" class="nav-cta">Hire Me</a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-        <div class="nav-links">
-         <a href="index.html" class="active">Home</a>
-<a href="design.html">Design</a>
-<a href="web.html">Web</a>
-<a href="ebooks.html">E-books</a>
-<a href="contact.html">Contact</a>
-        </div>
-
-        <a class="btn primary" target="_blank"
-          href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" 
-          onclick="gtag('event','whatsapp_click',{
-  event_category:'engagement',
-  event_label:'whatsapp_button'
-})">
-          Let’s Talk
-        </a>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-content reveal">
+    <span class="hero-eyebrow">Available for freelance work</span>
+    <h1 class="hero-title">I'm Amuda<br><span class="grad">Oluwaferanmi</span></h1>
+    <p class="hero-role">Graphics Designer · Web Developer · Ebook Writer</p>
+    <p class="hero-desc">I craft bold visual identities, fast modern websites, and compelling digital ebooks — helping brands stand out and communicate clearly.</p>
+    <div class="hero-btns">
+      <a href="#portfolio" class="btn-primary">View My Work</a>
+      <a href=https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you"" target="_blank" class="btn-ghost">Let's Talk →</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div>
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div>
+        <div class="stat-num">2+</div>
+        <div class="stat-label">Years Experience</div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- HOME -->
-  <section id="home" class="section active">
-    <div class="container">
-      <div class="grid two">
-        <div>
-          <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <span class="badge"> Available for work</span>
-            <span class="badge">Fast delivery </span>
-            <span class="badge">Premium quality</span>
-            <span class="badge"> Responsive websites </span>
-            <span class="badge">Clean & modern designs </span>
-          </div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-head reveal">
+    <p class="section-eyebrow">Who I am</p>
+    <h2 class="section-title">About Me <span class="bg-label">ABOUT ME</span></h2>
+  </div>
+  <div class="about-inner reveal">
+    <div class="about-photo">
+  <img src="me.jpeg" alt="Amuda Oluwaferanmi">
+</div>
+    <div class="about-text">
+      <h3>I'm a Creative Designer &amp; Developer</h3>
+      <p>I'm Amuda Oluwaferanmi, the creative mind behind AFCREATIVE DESIGN. I blend design thinking with technical skill to deliver graphics, websites, and ebooks that don't just look great — they work hard for your brand.</p>
+      <p>Whether you need a logo that turns heads, a website that converts visitors, or an ebook that positions you as an authority, I bring the same level of craft and intention to every project.</p>
+      <div class="about-tags">
+        <span class="tag">Canva</span>
+        <span class="tag">Figma</span>
+        <span class="tag">CorelDRAW</span>
+        <span class="tag">HTML/CSS/JS</span>
+        <span class="tag">WordPress</span>
+        <span class="tag">Photoshop</span>
+      </div>
+      <div class="social-row">
+        <a href="https://www.facebook.com/amudaoluwaferanmi1" target="_blank" class="social-icon" title="Facebook">FB</a>
+        <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" target="_blank" class="social-icon" title="WhatsApp">WA</a>
+        <a href="https://www.linkedin.com/in/amuda-oluwaferanmi-4594973b3" class="social-icon" title="LinkedIn">in</a>
+        <a href="https://selar.com/m/amuda-oluwaferanmi1897449" target="_blank" class="social-icon" title="Selar">SE</a>
+      </div>
+    </div>
+  </div>
+  <!-- Horizontal scroll stat cards -->
+  <div class="hscroll-wrap" style="margin-top:48px;">
+    <div class="hscroll-track">
+      <div class="about-card"><div class="num">50+</div><p>Projects completed across design, web & ebooks</p></div>
+      <div class="about-card"><div class="num">30+</div><p>Satisfied clients who keep coming back</p></div>
+      <div class="about-card"><div class="num">2+</div><p>Years of creative &amp; technical experience</p></div>
+      <div class="about-card"><div class="num">100%</div><p>Client satisfaction commitment on every project</p></div>
+      <div class="about-card"><div class="num">24h</div><p>Average response time to new inquiries</p></div>
+    </div>
+  </div>
+</section>
 
-          <h1 class="title">Hello, I’m Amuda Oluwaferanmi</h1>
-          <p style="margin-top:10px; font-weight:800; color:rgba(255,255,255,.80);">
-            Brand Designer ➝ Graphics Designer • Web Developer • E-book Writer
-          </p>
-          <p class="subtitle">
-            I help brands attract paying clients through converting designs, modern websites,
-            and professional e-books.
-            </p>
-            <p class="muted" style="margin-top:14px;"> Over the years, I’ve worked on logos, business flyers, social media ads,
-        portfolio websites, landing pages, and professional e-book formatting.
-        My goal is simple — clean design, strong branding, and results.
-        <p class="muted" style="margin-top:14px;">
-        I believe every brand deserves a professional online presence.
-        That’s why I combine design thinking with modern web structure.
-      </p>
-          </p>
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-head reveal">
+    <p class="section-eyebrow">What I offer</p>
+    <h2 class="section-title">My Services <span class="bg-label">SERVICES</span></h2>
+  </div>
+  <div class="hscroll-wrap reveal">
+    <div class="hscroll-track">
 
-          <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;"> 
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>Graphics Design</h3>
+        <p>From brand identities to social media visuals, I create designs that speak your brand's language and stop the scroll.</p>
+        <ul class="service-list">
+          <li>Logo &amp; Brand Identity</li>
+          <li>Social Media Graphics</li>
+          <li>Flyers &amp; Posters</li>
+          <li>Business Cards &amp; Stationery</li>
+          <li>Brand Style Guides</li>
+        </ul>
+        <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" target="_blank" class="service-btn">Get a Quote</a>
+      </div>
 
-<a href="contact.html" class="btn primary" class="active">Contact Me</a>
-<a href="design.html" class="btn ghost">View Designs</a>
-<a href="web.html" class="btn ghost">View Websites</a>
-<a href="ebook.html" class="btn ghost">View E-books</a>
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Website Development</h3>
+        <p>Clean, fast, mobile-ready websites built to represent your brand professionally and convert your visitors into clients.</p>
+        <ul class="service-list">
+          <li>Portfolio &amp; Business Websites</li>
+          <li>Landing Pages</li>
+          <li>WordPress Development</li>
+          <li>Website Redesign</li>
+          <li>Maintenance &amp; Updates</li>
+        </ul>
+        <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" target="_blank" class="service-btn">Get a Quote</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📖</div>
+        <h3>Ebook Writing</h3>
+        <p>Well-researched, professionally designed ebooks that establish authority, generate leads, and deliver real value to your audience.</p>
+        <ul class="service-list">
+          <li>Educational Ebooks</li>
+          <li>Lead Magnet Ebooks</li>
+          <li>Business &amp; How-To Guides</li>
+          <li>Ebook Layout &amp; Design</li>
+          <li>Content Strategy</li>
+        </ul>
+        <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" target="_blank" class="service-btn">Get a Quote</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="section-head reveal">
+    <p class="section-eyebrow">My background</p>
+    <h2 class="section-title">My Resume <span class="bg-label">RESUME</span></h2>
+  </div>
+  <div class="resume-grid reveal">
+
+    <!-- Missions & Values -->
+    <div>
+      <div class="resume-col"><h3>Missions &amp; Values</h3></div>
+      <p class="missions-text">My mission is to help individuals and businesses tell their stories visually — through purposeful design, clean code, and compelling writing. I believe every creative project deserves honesty, intentionality, and attention to detail.</p>
+      <br>
+      <p class="missions-text" style="font-style:italic;color:var(--muted2);">"Design is not just what it looks like — design is how it works."</p>
+    </div>
+
+    <!-- Personal Info -->
+    <div>
+      <div class="resume-col"><h3>Personal Information</h3></div>
+      <div class="resume-item">
+        <div class="role" style="font-size:.85rem;color:var(--muted);">📍 Location</div>
+        <div style="font-size:.9rem;">Nigeria</div>
+      </div>
+      <div class="resume-item">
+        <div class="role" style="font-size:.85rem;color:var(--muted);">📅 Experience</div>
+        <div style="font-size:.9rem;">2+ Years</div>
+      </div>
+      <div class="resume-item">
+        <div class="role" style="font-size:.85rem;color:var(--muted);">📧 Email</div>
+        <div style="font-size:.9rem;"><amudaoluwaferanmi@gmail.com><span style="color:var(--muted2);">amudaoluwaferanmi@gmail.com</span></div>
+      </div>
+      <div class="resume-item">
+        <div class="role" style="font-size:.85rem;color:var(--muted);">📱 WhatsApp</div>
+        <div style="font-size:.9rem;"><a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" style="color:var(--purple);text-decoration:none;">+234 816 951 8870</a></div>
+      </div>
+      <div class="resume-item">
+        <div class="role" style="font-size:.85rem;color:var(--muted);">🎓 Education</div>
+        <div style="font-size:.9rem;"><!-- Edit this --> University (Current)</div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div>
+      <div class="resume-col"><h3>Programming &amp; Design Skills</h3></div>
+      <div class="skill-bar-row"><div class="skill-bar-label"><span>Graphics Design</span><span>90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div></div>
+      <div class="skill-bar-row"><div class="skill-bar-label"><span>HTML / CSS</span><span>85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div></div>
+      <div class="skill-bar-row"><div class="skill-bar-label"><span>JavaScript</span><span>70%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div></div>
+      <div class="skill-bar-row"><div class="skill-bar-label"><span>WordPress</span><span>80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div></div>
+      <div class="skill-bar-row"><div class="skill-bar-label"><span>Canva / Figma</span><span>92%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:92%"></div></div></div>
+
+      <div style="margin-top:28px;">
+        <div class="resume-col" style="margin-bottom:12px;"><h3>Language Skills</h3></div>
+        <div class="lang-row">
+          <span class="lang-pill">English – Fluent</span>
+          <span class="lang-pill">Yoruba – Native</span>
         </div>
-        </div>
-
-        <div class="card">
-          <p class="h3">About Me</p>
-          <p class="muted" style="margin-top:8px;">
-            Creative professional focused on clean visuals, strong brand identity, and modern web UI.
-          </p>
-
-          <div class="card" style="margin-top:14px; background:rgba(0,0,0,.25);">
-            <p class="small">Phone</p>
-            <p style="font-weight:900; margin-top:4px;">+2348169518870</p>
-
-            <p class="small" style="margin-top:12px;">Facebook</p>
-            <a class="muted" target="_blank" href="https://www.facebook.com/share/1FyPtpNDkz/">
-              Amuda Oluwaferanmi
-            </a>
-
-            <p class="small" style="margin-top:12px;">Email Address</p>
-            <a class="muted" target="_blank" href="amudaoluwaferanmi@gmail.com">
-              amudaoluwaferanmi@gmail.com
-            </a>
-             <a style="margin-top:16px;" class="small">
-            Nigeria
-          </a>
-          </div>
-        </div>
-      </div>
-
-<section class="fade-in" style="margin-top:80px;">
-  <h2 class="title" style="font-size:30px;">My Skills</h2>
-
-  <div style="margin-top:20px; display:grid; gap:18px;">
-
-    <div>
-      <p class="small">HTML</p>
-      <div style="background:rgba(255,255,255,.1); border-radius:900px; height:8px;">
-        <div style="width:90%; height:8px; border-radius:900px; background:linear-gradient(90deg,#8b5cf6,#d946ef);"></div>
       </div>
     </div>
 
+    <!-- Experience -->
     <div>
-      <p class="small">CSS</p>
-      <div style="background:rgba(255,255,255,.1); border-radius:999px; height:8px;">
-        <div style="width:85%; height:8px; border-radius:999px; background:linear-gradient(90deg,#8b5cf6,#d946ef);"></div>
+      <div class="resume-col"><h3>Experience</h3></div>
+      <div class="resume-item">
+        <div class="role">Freelance Creative Designer</div>
+        <div class="company">AFCREATIVE DESIGN</div>
+        <div class="period">2024 – Present</div>
+        <div class="desc">Delivering graphics design, web development, and ebook writing services to clients across various industries.</div>
       </div>
-    </div>
-
-    <div>
-      <p class="small">JavaScript</p>
-      <div style="background:rgba(255,255,255,.1); border-radius:999px; height:8px;">
-        <div style="width:75%; height:8px; border-radius:999px; background:linear-gradient(90deg,#8b5cf6,#d946ef);"></div>
+      <div class="resume-item">
+        <div class="role">Freelance Brand Strategist</div>
+        <div class="company">GASLY</div>
+        <div class="period">2024 - Present</div>
+        <div class="desc">Developed a reliable visual identity and digital presence for the fashion label, managing end-to-end graphic design and responsive web development to elevate brand.</div>
       </div>
-    </div>
-
-    <div>
-      <p class="small">Graphic Design</p>
-      <div style="background:rgba(255,255,255,.1); border-radius:999px; height:8px;">
-        <div style="width:95%; height:8px; border-radius:999px; background:linear-gradient(90deg,#8b5cf6,#d946ef);"></div>
-      </div>
-    </div>
- 
-    <div>
-      <p class="small">Writing</p>
-      <div style="background:rgba(255,255,255,.1); border-radius:999px; height:8px;">
-        <div style="width:95%; height:8px; border-radius:999px; background:linear-gradient(90deg,#8b5cf6,#d946ef);"></div>
+      <div class="resume-item">
+        <div class="role">Freelance Graphics Designer</div>
+        <div class="company">EcoSwift</div>
+        <div class="period">2025 - 2026</div>
+        <div class="desc">Created professional graphic designs, marketing materials, and promotional assets to support the delivery service company's brand visual identity.</div>
       </div>
     </div>
 
   </div>
 </section>
 
-<section class="fade-in" style="margin-top:80px;">
-  <h2 class="title" style="font-size:28px;">My Services</h2>
-
-  <div class="grid three" style="margin-top:20px;">
-
-    <div class="card">
-      <p class="h3">Graphics Design</p>
-      <p class="muted" style="margin-top:8px;">
-        Logos, flyers, social media designs, branding, and clean marketing materials.
-      </p>
-    </div>
-
-    <div class="card">
-      <p class="h3">Web Development</p>
-      <p class="muted" style="margin-top:8px;">
-        Modern responsive websites, landing pages, and portfolio sites built with clean UI.
-      </p>
-    </div>
-
-    <div class="card">
-      <p class="h3">E-book Writing & Formatting</p>
-      <p class="muted" style="margin-top:8px;">
-        Writing, editing, professional formatting and beautiful cover designs ready for publishing.
-      </p>
-    </div>
-
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="section-head reveal">
+    <p class="section-eyebrow">My work</p>
+    <h2 class="section-title">My Portfolio <span class="bg-label">PORTFOLIO</span></h2>
   </div>
-</section>
-
-<div class="transform">
-  <div class="grid two">
-
-    <!-- TEXT SIDE -->
-    <div>
-      <span class="badge">My Process</span>
-      <h2 class="title" style="font-size:28px;">
-        Here’s how I’ll transform your brand
-      </h2>
-
-      <p class="subtitle">
-        If I was hired as your Brand designer (Graphics Designer + Web Developer), this is how I take your brand from average to premium:
-      </p>
-
-      <div class="steps">
-        <p>✔ Designing or refining your logo</p>
-        <p>✔ Building a strong, memorable brand identity</p>
-        <p>✔ Developing a premium, high-converting website</p>
-        <p>✔ Creating communicative flyers & social media ads</p>
-        <p>✔ Showcasing your business to attract clients</p>
-        <p>✔ Managing and improving your online presence</p>
-      </div>
-    </div>
-
-
-
+  <div class="portfolio-tabs reveal">
+    <button class="ptab active" onclick="switchTab('graphics')">Graphics Design</button>
+    <button class="ptab" onclick="switchTab('websites')">Websites</button>
+    <button class="ptab" onclick="switchTab('ebooks')">Ebook</button>
   </div>
+
+  <!-- GRAPHICS -->
+  <div class="portfolio-panel active" id="tab-graphics">
+    <p style="color:var(--muted);font-size:.88rem;margin-bottom:24px;">Brand Showcase — a curated collection from recent brand identity projects.</p>
+    <div class="collage-grid">
+      <div class="collage-cell"><img src="super1.jpg" alt="Brand Visual 1"></div>
+      <div class="collage-cell"><img src="flyer9.jpg" alt="Brand Visual 1"></div>
+      <div class="collage-cell"><img src="social7.jpg" alt="Brand Visual 1"></div>
+      <div class="collage-cell"><img src="food1.png" alt="Brand Visual 1"></div>
+      <div class="collage-cell"><img src="mockup1.png" alt="Brand Visual 1"></div>
+      <div class="collage-cell"><img src="branding1.jpg" alt="Brand Visual 1"></div>
+    </div>
+    <div class="portfolio-seemore" style="margin-top:32px;">
+      <a href="design.html" class="btn-ghost">See More Designs →</a>
+    </div>
+  </div>
+
+  <!-- WEBSITES -->
+  <div class="portfolio-panel" id="tab-websites">
+    <div class="showcase-card">
+     <div class="showcase-img">
+  <img src="gasly1.png" alt="Gasly Style Website" style="width:100%;height:100%;object-fit:cover;">
 </div>
-
-<section class="fade-in" style="margin-top:80px;">
-  <h2 class="title" style="font-size:28px;">Client Reviews</h2>
-
-  <div class="grid three" style="margin-top:20px;">
-
-    <div class="card">
-      <p class="muted">
-        “Very professional and delivered my website exactly how I wanted it.
-        Highly recommended.”
-      </p>
-      <p style="margin-top:14px; font-weight:800;">— Business Owner</p>
-    </div>
-
-    <div class="card">
-      <p class="muted">
-        “The flyer design was clean and attractive.
-        I got more engagement on my promo.”
-      </p>
-      <p style="margin-top:14px; font-weight:800;">— Brand Client</p>
-    </div>
-
-    <div class="card">
-      <p class="muted">
-        “Excellent formatting on my e-book.
-        It looked ready for Amazon publishing.”
-      </p>
-      <p style="margin-top:14px; font-weight:800;">— Author</p>
-    </div>
-
-  </div>
-</section>
-  </section>
-  
-  <!-- DESIGN -->
-  <section id="design" class="section">
-    <div class="container">
-      <span class="badge">Graphics Design</span>
-      <h2 class="title" style="font-size:28px;">Design showcase</h2>
-      <p class="subtitle">Logos, flyers, social media posts and branding.</p>
-
-      <div class="search">
-        <input id="designSearch" placeholder="Search designs (logo, flyer, branding...)" onkeyup="renderDesigns()" />
       </div>
-      <div class="filters">
-        <button class="active" onclick="setDesignFilter('All')">All</button>
-        <button onclick="setDesignFilter('Logo')">Logo</button>
-        <button onclick="setDesignFilter('Flyer')">Flyer</button>
-        <button onclick="setDesignFilter('Social')">Social</button>
-        <button onclick="setDesignFilter('Branding')">Branding</button>
-        <button onclick="setDesignFilter('Card')">Card</button>
-        <button onclick="setDesignFilter('Tshirt Design')">Tshirt Design</button>
-        <button onclick="setDesignFilter('Mockup')">Mockup</button>
+      <div class="showcase-body">
+        <h3>Gasly Style – Fashion Website</h3>
+        <p>A clean, modern fashion showcase website built to display collections and drive customer engagement. Features elegant layouts and smooth navigation.</p>
+        <div class="showcase-actions">
+          <a href="https://tinyurl.com/gasly-style" target="_blank" class="btn-primary" style="font-size:.85rem;padding:10px 22px;">View Website ↗</a>
+          <a href="web.html" class="btn-outline">See More →</a>
+        </div>
       </div>
-
-      <div id="designGrid" class="grid three"></div>
     </div>
-    
-    <div class="cta">
-  <div class="cta-inner">
-    
-    <h2>Have a Project in Mind?</h2>
-    <p>Let’s bring your vision to life. Contact me today and get a premium result.</p>
-
-    <div class="cta-buttons">
-      <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20start%20a%20project" target="_blank" class="btn primary">
-        🚀 Start Your Project
-      </a>
-
-    </div>
-
   </div>
-</div>
-  </section>
-
-  <!-- WEB -->
-  <section id="web" class="section">
-    <div class="container">
-      <span class="badge">Web Development</span>
-      <h2 class="title" style="font-size:28px;">Website showcase</h2>
-      <p class="subtitle">Modern websites for brands & businesses.  </p>
-
-      <div class="search">
-        <input id="webSearch" placeholder="Search websites (GASLY, portfolio, landing...)" onkeyup="renderWebsites()" />
-      </div>
-
-      <div id="gaslyFeatured" class="card" style="margin-bottom:18px;"></div>
-
-      <div id="webGrid" class="grid three"></div>
-    </div>
-    <div class="cta">
-  <div class="cta-inner">
-    
-    <h2>Have a Project in Mind?</h2>
-    <p>Let’s bring your vision to life. Contact me today and get a premium result.</p>
-
-    <div class="cta-buttons">
-      <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20start%20a%20project" target="_blank" class="btn primary">
-        🚀 Start Your Project
-      </a>
-
-    </div>
-
-  </div>
-</div>
-  </section>
 
   <!-- EBOOKS -->
-  <section id="ebooks" class="section">
-    <div class="container">
-      <span class="badge">E-book Writing</span>
-      <h2 class="title" style="font-size:28px;">E-book showcase</h2>
-      <p class="subtitle">Writing, formatting, and cover design.</p>
-
-      <div class="search">
-        <input id="ebookSearch" placeholder="Search e-books (business, self-help...)" onkeyup="renderEbooks()" />
+  <div class="portfolio-panel" id="tab-ebooks">
+    <div class="showcase-card">
+      <div class="showcase-img">
+  <img src="redjack.png" alt="RedJack Ebook" style="width:100%;height:100%;object-fit:cover;">
+</div>
       </div>
-
-      <div id="ebookGrid" class="grid four"></div>
+      <div class="showcase-body">
+        <h3>RedJack – Featured Ebook</h3>
+        <p>A professionally written and designed ebook that delivers real value. Clean typography, engaging layout, and compelling content from cover to cover.</p>
+        <div class="showcase-actions">
+          <a href="redjack.html" class="btn-primary" style="font-size:.85rem;padding:10px 22px;">View Ebook ↗</a>
+          <a href="ebook.html" class="btn-outline">See More →</a>
+        </div>
+      </div>
     </div>
-    <div class="cta">
-  <div class="cta-inner">
-    
-    <h2>Have a Project in Mind?</h2>
-    <p>Let’s bring your vision to life. Contact me today and get a premium result.</p>
-
-    <div class="cta-buttons">
-      <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20start%20a%20project" target="_blank" class="btn primary">
-        🚀 Start Your Project
-      </a>
-
-    </div>
-
   </div>
-</div>
-  </section>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container">
-      <span class="badge">Contact</span>
-      <h2 class="title" style="font-size:28px;">Let’s work together</h2>
-      <p class="subtitle">Send a message on WhatsApp or email.</p>
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-head reveal">
+    <p class="section-eyebrow">Transparent rates</p>
+    <h2 class="section-title">Best Pricing Ever <span class="bg-label">PRICING</span></h2>
+  </div>
+  <div class="pricing-grid reveal">
+    <div class="price-card">
+      <div class="plan-name">Starter Plan</div>
+      <div class="plan-price">₦<!-- Edit -->25,000 <span>/ project</span></div>
+      <div class="plan-desc">Perfect for individuals who need a quick, clean deliverable.</div>
+      <ul class="plan-features">
+        <li><span class="check">✓</span>1 Service (Design or Web or Ebook)</li>
+        <li><span class="check">✓</span>2 Revisions</li>
+        <li><span class="check">✓</span>Source Files</li>
+        <li><span class="check">✓</span>7-Day Delivery</li>
+      </ul>
+      <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" target="_blank" class="plan-btn">Get Started</a>
+    </div>
 
-      <div class="grid two">
-        <div class="card">
-          <p class="h3">Direct contact</p>
-          <p class="muted" style="margin-top:10px;">Phone: <b style="color:white;">+2348169518870</b></p>
-          <p class="muted">Email: <b style="color:white;">amudaoluwaferanmi@gmail.com</b></p>
-          <p class="muted">Location: <b style="color:white;">Nigeria</b></p>
+    <div class="price-card featured">
+      <div class="price-badge">Most Popular</div>
+      <div class="plan-name">Standard Plan</div>
+      <div class="plan-price">₦<!-- Edit -->50,000 <span>/ project</span></div>
+      <div class="plan-desc">Ideal for small businesses ready to build a strong presence.</div>
+      <ul class="plan-features">
+        <li><span class="check">✓</span>2 Services Combined</li>
+        <li><span class="check">✓</span>Unlimited Revisions</li>
+        <li><span class="check">✓</span>Source Files &amp; Assets</li>
+        <li><span class="check">✓</span>Priority Support</li>
+        <li><span class="check">✓</span>10-Day Delivery</li>
+      </ul>
+      <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" target="_blank" class="plan-btn">Get Started</a>
+    </div>
 
-          <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn primary" target="_blank"
-              href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20need%20your%20service" 
-              onclick="gtag('event','whatsapp_click',{
-  event_category:'engagement',
-  event_label:'whatsapp_button'
-})">
-              WhatsApp
-            </a>
-            <a class="btn ghost" href="mailto:amudaoluwaferanmi@gmail.com">Email</a>
+    <div class="price-card">
+      <div class="plan-name">Premium Plan</div>
+      <div class="plan-price">₦<!-- Edit -->100,000 <span>/ project</span></div>
+      <div class="plan-desc">Full creative package — design, web, and ebook, all in one.</div>
+      <ul class="plan-features">
+        <li><span class="check">✓</span>All 3 Services</li>
+        <li><span class="check">✓</span>Unlimited Revisions</li>
+        <li><span class="check">✓</span>All Source Files</li>
+        <li><span class="check">✓</span>Dedicated Support</li>
+        <li><span class="check">✓</span>Custom Timeline</li>
+      </ul>
+      <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" target="_blank" class="plan-btn">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<!-- HIRE -->
+<section id="hire">
+  <p class="section-eyebrow" style="justify-content:center;display:flex;">Open for work</p>
+  <h2>Interested in Working with Me?</h2>
+  <p>Let's bring your vision to life. Whether it's a brand, a website, or a digital product — I'm ready to make it happen.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+    <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" target="_blank" class="btn-primary">Chat on WhatsApp</a>
+    <a href="mailto:amudaoluwaferanmi@gmail.com" class="btn-ghost">Send an Email</a>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-head reveal">
+    <p class="section-eyebrow">What they say</p>
+    <h2 class="section-title">Client Feedbacks <span class="bg-label">CLIENT</span></h2>
+  </div>
+  <div class="hscroll-wrap reveal">
+    <div class="hscroll-track">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Oluwaferanmi delivered exactly what I needed. The logo was beyond what I imagined — clean, bold, and perfectly on brand. Very professional."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">AO</div>
+          <div>
+            <div class="reviewer-name">Skincare Vendor</div>
+            <div class="reviewer-role">Aminat</div>
           </div>
         </div>
-
-        <div class="card">
-          <p class="h3">Quick message</p>
-          <p class="muted" style="margin-top:8px;">
-            Message will be sent to WhatsApp
-          </p>
-
-          <div style="margin-top:14px; display:grid; gap:10px;">
-            <input class="search" style="margin:0;" placeholder="Your name" />
-            <input class="search" style="margin:0;" placeholder="Service (Design/Web/E-book)" />
-            <textarea class="search" style="margin:0; border-radius:22px; min-height:120px;"
-              placeholder="Tell me what you want..."></textarea>
-              <div style="margin-top:14px;">
-  <button onclick="sendMessage()" class="btn primary" style="width:100%;">
-    Send Message
-  </button>
-</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"My website looks amazing and loads super fast. Feranmi understood my vision right away and delivered before the deadline. Highly recommend!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">GO</div>
+          <div>
+            <div class="reviewer-name">Geyana</div>
+            <div class="reviewer-role">Content Creator</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"It is a great experience! The Recipe ebook she created for my brand was well-written, beautifully designed, and ready on time. Will definitely work again."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">AK</div>
+          <div>
+            <div class="reviewer-name">Ademola</div>
+            <div class="reviewer-role">Restaurant</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Working with AFCREATIVE was seamless. Great communication, great results, and a very smooth process from start to finish."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">MK</div>
+          <div>
+            <div class="reviewer-name">Accessories Vendor</div>
+            <div class="reviewer-role">Startup Founder</div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <div class="footer">
-  <div class="container">
-    <div class="grid three">
-
-      <div>
-        <h3>AFCREATIVE DESIGN</h3>
-        <p>Your trusted creative partner. Grow your business through transforming design, websites, and digital presence.</p>
-      </div>
-
-      <div>
-        <h4>Brand Designer</h4>
-        <p>Trusted</p>
-        <p>Available for work</p>
-        <p>Competent</p>
-        <p>View Service Plan</p>
-      </div>
-
-      <div>
-        <h4>Contact</h4>
-        <p>📞 +2348169518870</p>
-        <p>📧 amudaoluwaferanmi@gmail.com</p>
-        <a href="https://wa.me/2348169518870" target="_blank" class="btn primary">
-          WhatsApp Me
-        </a>
-      </div>
-
-    </div>
-
-    <p style="margin-top:20px; text-align:center;">
-      © <span id="year"></span> AFCREATIVE DESIGN. All rights reserved.
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-head reveal">
+    <p class="section-eyebrow">Insights & tips</p>
+    <h2 class="section-title">From the Blog <span class="bg-label">BLOG</span></h2>
+  </div>
+  <div class="hscroll-wrap reveal">
+    <div class="hscroll-track">
+         <div class="blog-card">
+  <div class="blog-img"><img src="brand1.png" alt="Design Tips" style="width:100%;height:100%;object-fit:cover;"></div>
+  <div class="blog-body">
+    <div class="blog-tag">Brand</div>
+    <div class="blog-title">Here's How I'll Transform Your Brand</div>
+    <p style="color:var(--muted);font-size:.82rem;line-height:1.7;margin:8px 0 12px;">
+      If hired as your Brand Designer, here's how I take you from average to premium:
     </p>
-  </div>
-</div>
-  </div>
-
-  <script>
-    document.getElementById("year").innerText = new Date().getFullYear();
-
-    // PAGE NAVIGATION
-function go(page){
-
-  // remove active class
-  document.querySelectorAll(".section").forEach(function(s){
-    s.classList.remove("active");
-  });
-
-  // show selected section
-  var target = document.getElementById(page);
-  if(target){
-    target.classList.add("active");
-  }
-
-// 🔥 FIX NAV ACTIVE STATE
-  document.querySelectorAll(".nav-links button").forEach(function(btn){
-    btn.classList.remove("active");
-  });
-
-  var activeBtn = document.getElementById("nav-" + page);
-  if(activeBtn){
-    activeBtn.classList.add("active");
-  }
-
-  // 🔥 FIX: scroll to top
-  window.scrollTo(0, 0);
-}
-
-    // DATA 
-    const designs = [
-    {title:"AFCREATIVE DESIGN", type:"Logo", year:"2024", img:"mylogo2.png"},
-   {title:"Minimal Bakery Logo", type:"Logo", year:"2026", img:"logo1.jpg"},
-  {title:"Business Flyer", type:"Flyer", year:"2026", img:"flyer1.jpg"},
-  {title:"Business Promo Flyer", type:"Flyer", year:"2025", img:"flyer2.jpg"},
-  {title:"Cookies Bakery Logo", type:"Logo", year:"2025", img:"logo9.jpg"},
-  {title:"E-book Cover", type:"Mockup", year:"2024", img:"redjack.png"},
-  {title:"Cosmetic Logo", type:"Logo", year:"2025", img:"girl1.jpg"},
-  {title:"Brand Identity", type:"Branding", year:"2026", img:"fam.png"},
-  {title:"Business Card", type:"Card", year:"2025", img:"eco.jpg"},
-  {title:"Social Media Ad", type:"Social", year:"2026", img:"social.png"},
-  {title:"Minimal Bakery Logo", type:"Logo", year:"2024", img:"logo3.jpg"},
-  {title:"Food Menu", type:"Flyer", year:"2025", img:"food2.png"},
-  {title:"Instagram Ad Post", type:"Social", year:"2025", img:"social2.jpg"},
-  {title:"Social Media Ad", type:"Social", year:"2026", img:"social3.jpg"},
-  {title:"Brand Identity Mock", type:"Branding", year:"2026", img:"branding1.jpg"},
-  {title:"Photographer's Logo", type:"Logo", year:"2026", img:"eu.jpg"},
-  {title:"Social Media Ad", type:"Social", year:"2025", img:"social2.png"},
-  {title:"Delivery Service Logo", type:"Logo", year:"2025", img:"logo4.jpg"},
-  {title:"Business Card", type:"Card", year:"2026", img:"eu1.jpg"},
-  {title:"Brand Identity", type:"Branding", year:"2025", img:"eco.png"},
-  {title:"Event Poster", type:"Flyer", year:"2026", img:"party.jpg"},
-  {title:"Food Menu", type:"Flyer", year:"2025", img:"food3.png"},
-  {title:"Business Ad", type:"Flyer", year:"2025", img:"flyer5.jpg"},
-  {title:"Event Poster", type:"Flyer", year:"2026", img:"event1.jpg"},
-  {title:"Business Flyer", type:"Flyer", year:"2025", img:"flyer3.jpg"},
-  {title:"Business Card", type:"Card", year:"2026", img:"card1.jpg"},
-  {title:"Print-on Design", type:"Tshirt Design", year:"2026", img:"tshirt2.jpg"},
-  {title:"Package Design", type:"Mockup", year:"2024", img:"mockup4.png"},
-  {title:"Business Ad", type:"Flyer", year:"2025", img:"flyer6.jpg"},
-  {title:"Social Media Ad", type:"Social", year:"2026", img:"social5.jpg"},
-  {title:"Brand Identity", type:"Branding", year:"2025", img:"girls.png"},
-  {title:"Business Card", type:"Card", year:"2026", img:"kylis.jpg"},
-  {title:"Birthday Flyer", type:"Flyer", year:"2025", img:"birthday3.png"},
-  {title:"Print-on Design", type:"Tshirt Design", year:"2026", img:"tshirt1.jpg"},
-  {title:"Package Design", type:"Mockup", year:"2024", img:"mockup3.png"},
-  {title:"Facebook Post", type:"Social", year:"2026", img:"food1.png"},
-  {title:"Business Flyer", type:"Flyer", year:"2026", img:"flyer7.jpg"},
-  {title:"Instagram Post", type:"Social", year:"2026", img:"social4.jpg"},
-  {title:"Birthday Flyer", type:"Flyer", year:"2025", img:"birthday4.png"},
-  {title:"Brand Identity", type:"Branding", year:"2026", img:"rp.png"},
-  {title:"Package Design", type:"Mockup", year:"2024", img:"mockup1.png"},
-  {title:"Business Flyer", type:"Flyer", year:"2026", img:"flyer8.jpg"},
-  {title:"Package Design", type:"Mockup", year:"2026", img:"mockup2.jpg"},
-    ];
-
-    const websites = [
-  {title:"GASLY", type:"Brand Website", tools:["UI","Brand","Web"], featured:true, link: "https://tinyurl.com/gasly-style"},
-  {title:"SkillConnect: Online class website", type:"Portfolio", tools:["HTML","CSS"], featured:false, link: "https://tinyurl.com/skillconnect1", img:"skill1.jpg"},
-  {title:"CBT", type:"Landing Page", tools:["HTML","CSS"], featured:false, link: "https://tinyurl.com/unilesa-testpractice", img:"cbt.jpg"},
-];
-
-    const ebooks = [
-  {
-    title: "Red Jack",
-    genre: "Mystery and Romance Story",
-    img: "redjack.png",
-    link: "https://docs.google.com/document/d/1omRF0TkPJ0VuCooGfGGdpCS_3yWC0p4teB-lPqjsawQ/edit?usp=drivesdk"
-  },
-  {
-    title: "Nigeria Twenty Recipes E-book",
-    genre: "Lifestyle",
-    img: "recipe.jpg",
-    link: "https://docs.google.com/document/d/1T0hFJ4Ryl7ADerPQHqfan3wyw2EJ3_TgBeFc5aPuF9Y/edit?usp=drivesdk"
-  },
-  {
-    title: "The Self-Confidence Blueprint",
-    genre: "Self-help",
-    img: "growth.jpg",
-    link: "https://docs.google.com/document/d/1PHX4BDvQZXpdrkCYAQorArgjYvpJmy_G4yoSeMMCm9s/edit?usp=drivesdk"
-  },
-];
-
-    // DESIGN FILTER
-    let designFilter = "All";
-    function setDesignFilter(f){
-      designFilter = f;
-      document.querySelectorAll("#design .filters button").forEach(b => b.classList.remove("active"));
-      event.target.classList.add("active");
-      renderDesigns();
-    }
-
-    function renderDesigns(){
-      const q = document.getElementById("designSearch").value.toLowerCase();
-      const grid = document.getElementById("designGrid");
-      grid.innerHTML = "";
-
-      designs
-        .filter(d => designFilter === "All" ? true : d.type === designFilter)
-        .filter(d => d.title.toLowerCase().includes(q))
-        .forEach(d => {
-          grid.innerHTML += `
-            <div class="card">
-              <div class="media">
-  <img src="${d.img}" 
-       alt="${d.title}" 
-       style="width:100%; height:auto; display:block; border-radius:18px;">
-</div>
-              <div style="margin-top:12px;">
-                <p class="h3">${d.title}</p>
-                <p class="small">${d.type} • ${d.year}</p>
-                <div class="chips">
-                  <span class="badge">${d.type}</span>
-                </div>
-              </div>
-            </div>
-          `;
-        });
-    }
-
-    // WEBSITES
-   function renderWebsites(){
-  const q = document.getElementById("webSearch").value.toLowerCase();
-  const featured = websites.find(w => w.featured); // Find GASLY
-  const featuredBox = document.getElementById("gaslyFeatured");
-
-  if (featured) {
-    // Show GASLY if it's featured
-    if (featured.title.toLowerCase().includes(q)) {
-      featuredBox.innerHTML = `
-  <div style="display:flex; gap:40px; align-items:center; flex-wrap:wrap;">
-
-    <div style="flex:1; min-width:280px;">
-      <img src="gasly1.png" src="${featured.img}" 
-           style="width:100%; border-radius:18px;">
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:14px;">
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Logo design & refinement</li>
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Strong, memorable brand identity</li>
+    </ul>
+    <!-- Hidden content -->
+    <ul id="blog1-more" style="list-style:none;display:none;flex-direction:column;gap:6px;margin-bottom:14px;">
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Premium, high-converting website</li>
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Flyers & social media ads</li>
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Online presence management</li>
+    </ul>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="blog-date">June 2025</div>
+      <a href="#" onclick="toggleBlog1(event)" id="blog1-btn" style="color:var(--purple);font-size:.82rem;font-weight:600;text-decoration:none;">Read More →</a>
     </div>
-
-    <div style="flex:1; min-width:280px;">
-      <h2>${featured.title}</h2>
-      <p style="margin:10px 0 20px 0;">
-        GASLY is a fashion brand online shopping website.
-      </p>
-
-      <div style="margin-bottom:20px;">
-        ${featured.tools.map(t => `<span class="badge">${t}</span>`).join("")}
+  </div>
+</div>
+      <div class="blog-card">
+        <div class="blog-img"><img src="design1.png" alt="Design Tips" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="blog-body">
+          <div class="blog-tag">Design</div>
+          <div class="blog-title">5 Design Principles Every Brand Needs to Know</div>
+           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:14px;">
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Keep your visuals simple.</li>
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Keep your brand consistent.</li>
+    </ul>
+    <!-- Hidden content -->
+    <ul id="blog2-more" style="list-style:none;display:none;flex-direction:column;gap:6px;margin-bottom:14px;">
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Make important details stand out.</li>
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Use colors that fit your business personality.</li>
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Reach out to professional brand designers.</li>
+    </ul>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="blog-date">June 2026</div>
+      <a href="#" onclick="toggleBlog2(event)" id="blog2-btn" style="color:var(--purple);font-size:.82rem;font-weight:600;text-decoration:none;">Read More →</a>
+    </div>
+        </div>
       </div>
-
-      <a href="${featured.link}" target="_blank" 
-         style="display:inline-block; padding:12px 30px; 
-                border-radius:30px; 
-                background:linear-gradient(90deg,#8a2be2,#ff4ecd); 
-                color:white; text-decoration:none;">
-        Visit Website
-      </a>
+      <div class="blog-card">
+        <div class="blog-img"><img src="web.png" alt="Design Tips" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="blog-body">
+          <div class="blog-tag">Web Dev</div>
+          <div class="blog-title">Why Your Business Needs a Website in 2026</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:14px;">
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Builds Trust and Credibility.</li>
+      <li style="font-size:.8rem;color:var(--muted2);">✔ 24/7 Availability and Global Reach.</li>
+    </ul>
+    <!-- Hidden content -->
+    <ul id="blog3-more" style="list-style:none;display:none;flex-direction:column;gap:6px;margin-bottom:14px;">
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Drives Sales and Marketing Efficiency.</li>
+      <li style="font-size:.8rem;color:var(--muted2);">✔ Control in a Platform-Dependent World.</li>
+    </ul>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="blog-date">June 2026</div>
+      <a href="#" onclick="toggleBlog3(event)" id="blog3-btn" style="color:var(--purple);font-size:.82rem;font-weight:600;text-decoration:none;">Read More →</a>
     </div>
-
+        </div>
+      </div>
+    </div>
   </div>
-`;
-      featuredBox.style.display = "block";
-    } else {
-      featuredBox.style.display = "none";
-    }
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="logo">AFCREATIVE DESIGN</span>
+      <p>Bold visuals. Clean code. Compelling words. Creative solutions for modern brands.</p>
+      <div class="social-row" style="margin-top:20px;">
+        <a href="https://www.facebook.com/amudaoluwaferanmi1" target="_blank" class="social-icon" title="Facebook">FB</a>
+        <a href="https://x.com/oluwaferan62679" class="social-icon" title="Twitter/X">𝕏</a>
+        <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" target="_blank" class="social-icon">WA</a>
+        <a href="https://www.linkedin.com/in/amuda-oluwaferanmi-4594973b3" class="social-icon">in</a>
+        <a href="https://selar.com/m/amuda-oluwaferanmi1897449" target="_blank" class="social-icon" title="Selar">SE</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="design.html">Graphics Design</a></li>
+        <li><a href="website.html">Web Development</a></li>
+        <li><a href="ebook.html">Ebook Writing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:your@email.com">Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 AFCREATIVE DESIGN · All rights reserved.</span>
+    <span>Made with ♥ by <a href="#">Amuda Oluwaferanmi</a></span>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', ()=>{
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('mobile-open');
+  });
+
+  // Close menu when a link is tapped
+  document.querySelectorAll('.nav-links a').forEach(link=>{
+    link.addEventListener('click', ()=>{
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('mobile-open');
+    });
+  });
+
+  // Portfolio tab switching
+  function switchTab(tab){
+    document.querySelectorAll('.ptab').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.portfolio-panel').forEach(p=>p.classList.remove('active'));
+    document.querySelector(`[onclick="switchTab('${tab}')"]`).classList.add('active');
+    document.getElementById('tab-'+tab).classList.add('active');
   }
 
-  const grid = document.getElementById("webGrid");
-  grid.innerHTML = "";
-
-  websites
-    .filter(w => !w.featured)
-    .filter(w => w.title.toLowerCase().includes(q))
-    .forEach(w => {
-      grid.innerHTML += `
-        <div class="card">
-          <div class="media">
-            <img src="${w.img}" alt="${w.title} Preview" style="width:100%; border-radius:18px;">
-          </div>
-          <div style="margin-top:12px;">
-            <p class="h3">${w.title}</p>
-            <p class="small">${w.type}</p>
-            <div class="chips">
-              ${w.tools.map(t => `<span class="badge">${t}</span>`).join("")}
-            </div>
-           
-            <a href="${w.link}" target="_blank" class="btn primary">Visit Website</a>
-          </div>
-        </div>
-      `;
-    });
-}
-
-    // EBOOKS
-    function renderEbooks(){
-  const q = document.getElementById("ebookSearch").value.toLowerCase();
-  const grid = document.getElementById("ebookGrid");
-  grid.innerHTML = "";
-
-  ebooks
-    .filter(e => e.title.toLowerCase().includes(q))
-    .forEach(e => {
-
-      grid.innerHTML += `
-        <div class="card">
-
-          <!-- Ebook Cover -->
-          <div style="border-radius:18px; overflow:hidden;">
-            <img src="${e.img}"
-                 alt="${e.title}"
-                 style="width:100%; height:auto;">
-          </div>
-
-          <!-- Text Section -->
-          <div style="margin-top:12px;">
-            <p class="h3">${e.title}</p>
-            <p class="small">${e.genre}</p>
-
-            <div class="chips">
-              <span class="badge">PDF</span>
-            </div>
-
-            ${e.link ? `
-              <a href="${e.link}" target="_blank" class="btn primary" style="margin-top:10px;">
-                View E-book
-              </a>
-            ` : ""}
-
-          </div>
-
-        </div>
-      `;
-    });
-}
-
-    // INIT
-    renderDesigns();
-    renderWebsites();
-    renderEbooks();
-    function sendMessage() {
-  const name = document.querySelector('input[placeholder="Your name"]').value;
-  const service = document.querySelector('input[placeholder="Service (Design/Web/E-book)"]').value;
-  const message = document.querySelector('textarea').value;
-
-  const fullMessage = 
-`Hello Amuda Oluwaferanmi,
-
-My Name: ${name}
-Service Needed: ${service}
-
-Message:
-${message}`;
-
-  const encodedMessage = encodeURIComponent(fullMessage);
-
-  const whatsappLink = 
-  "https://wa.me/2348169518870?text=" + encodedMessage;
-
-gtag('event', 'whatsapp_click', {
-  event_category: 'engagement'
-});
-
-window.open(whatsappLink, "_blank");}
-  </script>
-  <script>
-  const faders = document.querySelectorAll('.fade-in');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  });
-
-  faders.forEach(el => observer.observe(el));
-</script>
-<script>
-fetch("https://api.countapi.xyz/hit/afcreativeportfolio/visits")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("visitorCount").innerText = data.value;
-  });
-</script>
-<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});
+  },{threshold:0.12});
+  reveals.forEach(r=>obs.observe(r));
   
-const firebaseConfig = {
-  apiKey: "AIzaSyC74ZuiTzZiHSdhOK2CdjhWOy0A2ICWV9E",
-  authDomain: "afcreative-design.firebaseapp.com",
-  projectId: "afcreative-design",
-  storageBucket: "afcreative-design.firebasestorage.app",
-  messagingSenderId: "410647841388",
-  appId: "1:410647841388:web:6d4e16ae6cbd32c8012649",
-  measurementId: "G-79SZRQ8X8Q"
-};
+  // Blog read more
+function toggleBlog1(e){
+  e.preventDefault();
+  const more = document.getElementById('blog1-more');
+  const btn = document.getElementById('blog1-btn');
+  if(more.style.display === 'none'){
+    more.style.display = 'flex';
+    btn.textContent = '← Show Less';
+  } else {
+    more.style.display = 'none';
+    btn.textContent = 'Read More →';
+  }
+}
 
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
+  // Blog read more
+function toggleBlog2(e){
+  e.preventDefault();
+  const more = document.getElementById('blog2-more');
+  const btn = document.getElementById('blog2-btn');
+  if(more.style.display === 'none'){
+    more.style.display = 'flex';
+    btn.textContent = '← Show Less';
+  } else {
+    more.style.display = 'none';
+    btn.textContent = 'Read More →';
+  }
+}
 
-  // Visitor Counter
-  const counterRef = db.collection("stats").doc("visits");
-
-  counterRef.get().then((doc) => {
-    if (doc.exists) {
-      counterRef.update({
-        count: firebase.firestore.FieldValue.increment(1)
-      });
-    } else {
-      counterRef.set({ count: 1 });
-    }
-  });
-
-  // Display Count
-  counterRef.onSnapshot((doc) => {
-    document.getElementById("visitorCount").innerText = doc.data().count;
-  });
+// Blog read more
+function toggleBlog3(e){
+  e.preventDefault();
+  const more = document.getElementById('blog3-more');
+  const btn = document.getElementById('blog3-btn');
+  if(more.style.display === 'none'){
+    more.style.display = 'flex';
+    btn.textContent = '← Show Less';
+  } else {
+    more.style.display = 'none';
+    btn.textContent = 'Read More →';
+  }
+}
 </script>
 </body>
 </html>

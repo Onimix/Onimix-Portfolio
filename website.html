@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Ebooks – AFCREATIVE DESIGN</title>
+<title>Websites – AFCREATIVE DESIGN</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QWT00QE9L"></script> 
@@ -37,39 +37,30 @@
   .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
   .hamburger.open span:nth-child(2){opacity:0;}
   .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-
-  /* PAGE HERO */
   .page-hero{padding:140px 6% 80px;position:relative;overflow:hidden;}
   .hero-glow{position:absolute;top:-100px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(139,92,246,.22) 0%,transparent 70%);pointer-events:none;}
   .page-eyebrow{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);border:1px solid rgba(139,92,246,.35);padding:6px 16px;border-radius:100px;margin-bottom:20px;}
   .page-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:800;line-height:1.08;margin-bottom:14px;}
   .page-title .grad{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
   .page-desc{color:var(--muted);font-size:.97rem;line-height:1.75;max-width:560px;}
-
-  /* EBOOK GRID */
-  .ebook-section{padding:80px 6%;}
-  .ebook-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
-  .ebook-card{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:border-color .25s,transform .25s;display:flex;flex-direction:column;}
-  .ebook-card:hover{border-color:rgba(139,92,246,.45);transform:translateY(-6px);}
-  .ebook-card img{width:100%;height:240px;object-fit:cover;display:block;transition:.3s;}
-  .ebook-card:hover img{transform:scale(1.03);}
-  .ebook-info{padding:22px;flex:1;display:flex;flex-direction:column;gap:8px;}
-  .ebook-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.05rem;font-weight:700;}
-  .ebook-genre{font-size:.78rem;color:var(--purple);font-weight:600;text-transform:uppercase;letter-spacing:.06em;}
-  .ebook-desc{color:var(--muted);font-size:.85rem;line-height:1.65;flex:1;}
-  .ebook-tag{display:inline-block;font-size:.75rem;padding:5px 12px;border-radius:100px;background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.25);color:var(--purple);font-weight:600;width:fit-content;}
-  .ebook-actions{display:flex;gap:10px;margin-top:8px;}
+  .web-section{padding:80px 6%;}
+  .web-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+  .web-card{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:border-color .25s,transform .25s;display:flex;flex-direction:column;}
+  .web-card:hover{border-color:rgba(139,92,246,.45);transform:translateY(-6px);}
+  .web-card img{width:100%;height:200px;object-fit:cover;display:block;transition:.3s;}
+  .web-card:hover img{transform:scale(1.03);}
+  .web-info{padding:22px;flex:1;display:flex;flex-direction:column;gap:8px;}
+  .web-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.05rem;font-weight:700;}
+  .web-desc{color:var(--muted);font-size:.85rem;line-height:1.65;flex:1;}
+  .web-tag{display:inline-block;font-size:.75rem;padding:5px 12px;border-radius:100px;background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.25);color:var(--purple);font-weight:600;width:fit-content;}
+  .web-actions{display:flex;gap:10px;margin-top:8px;}
   .btn-primary{background:var(--grad);color:#fff;padding:10px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.85rem;transition:transform .2s,opacity .2s;display:inline-block;}
   .btn-primary:hover{transform:translateY(-2px);opacity:.9;}
   .btn-ghost{border:1px solid var(--border);color:var(--text);padding:10px 22px;border-radius:8px;font-weight:600;text-decoration:none;font-size:.85rem;transition:.2s;display:inline-block;}
   .btn-ghost:hover{border-color:var(--purple);color:var(--purple);}
-
-  /* CTA */
   .cta-block{margin-top:80px;padding:60px 40px;border-radius:24px;text-align:center;background:linear-gradient(135deg,rgba(139,92,246,.12),rgba(217,70,239,.06));border:1px solid rgba(139,92,246,.25);}
   .cta-block h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;margin-bottom:12px;}
   .cta-block p{color:var(--muted);max-width:480px;margin:0 auto 32px;line-height:1.75;font-size:.95rem;}
-
-  /* FOOTER */
   footer{padding:60px 6% 32px;border-top:1px solid var(--border);}
   .footer-top{display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap;margin-bottom:48px;}
   .footer-brand p{color:var(--muted);font-size:.85rem;max-width:260px;line-height:1.7;margin-top:10px;}
@@ -82,10 +73,8 @@
   .social-row{display:flex;gap:12px;margin-top:16px;}
   .social-icon{width:40px;height:40px;border-radius:10px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;font-size:.85rem;font-weight:700;transition:.2s;}
   .social-icon:hover{border-color:var(--purple);color:var(--purple);}
-
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
   .reveal.visible{opacity:1;transform:none;}
-
   @media(max-width:768px){
     .nav-links{display:flex !important;flex-direction:column;gap:0;position:fixed;top:65px;left:0;right:0;z-index:998;background:rgba(7,7,10,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);max-height:0;overflow:hidden;padding:0;transition:max-height .35s ease,padding .35s ease;}
     .nav-links.mobile-open{max-height:400px;padding:16px 0;}
@@ -93,7 +82,7 @@
     .nav-cta{display:none;}
     .hamburger{display:flex;}
     .page-hero{padding:120px 4% 60px;}
-    .ebook-section{padding:60px 4%;}
+    .web-section{padding:60px 4%;}
     .cta-block{padding:40px 24px;}
     .footer-top{flex-direction:column;gap:32px;}
   }
@@ -156,8 +145,8 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="design.html">Design</a></li>
-    <li><a href="website.html">Websites</a></li>
-    <li><a href="ebook.html" class="active">Ebooks</a></li>
+    <li><a href="website.html" class="active">Websites</a></li>
+    <li><a href="ebook.html">Ebooks</a></li>
     <li><a href="index.html#pricing">Pricing</a></li>
   </ul>
   <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20want%20to%20work%20with%20you" target="_blank" class="nav-cta">Let's Talk</a>
@@ -166,49 +155,46 @@
 
 <div class="page-hero">
   <div class="hero-glow"></div>
-  <span class="page-eyebrow">Ebook Writing & Design</span>
-  <h1 class="page-title">Digital <span class="grad">Publications</span></h1>
-  <p class="page-desc">Professional ebook layouts, covers and digital publications designed to communicate clearly and sell.</p>
+  <span class="page-eyebrow">Web Development</span>
+  <h1 class="page-title">Website <span class="grad">Projects</span></h1>
+  <p class="page-desc">Clean, responsive and modern websites built for brands and businesses — designed to convert visitors into clients.</p>
 </div>
 
-<section class="ebook-section">
-  <div class="ebook-grid reveal">
+<section class="web-section">
+  <div class="web-grid reveal">
 
-    <div class="ebook-card">
-      <img src="redjack.png" alt="Red Jack">
-      <div class="ebook-info">
-        <div class="ebook-genre">Mystery & Romance</div>
-        <p class="ebook-title">Red Jack</p>
-        <p class="ebook-desc">Clean layout with structured typography for readability. A gripping story with a premium reading experience.</p>
-        <span class="ebook-tag">Layout · HTML</span>
-        <div class="ebook-actions">
-          <a href="RedJack.html" target="_blank" class="btn-primary">View Ebook ↗</a>
+    <div class="web-card">
+      <img src="gasly1.png" alt="GASLY Shopping Website">
+      <div class="web-info">
+        <p class="web-title">GASLY Shopping Website</p>
+        <p class="web-desc">Modern product-focused website with smooth navigation and animations.</p>
+        <span class="web-tag">E-commerce · UI</span>
+        <div class="web-actions">
+          <a href="https://tinyurl.com/gasly-style" target="_blank" class="btn-primary">View Website ↗</a>
         </div>
       </div>
     </div>
 
-    <div class="ebook-card">
-      <img src="recipe.jpg" alt="Recipe Ebook">
-      <div class="ebook-info">
-        <div class="ebook-genre">Lifestyle</div>
-        <p class="ebook-title">Recipe Ebook</p>
-        <p class="ebook-desc">Modern design with visual balance and strong hierarchy. A beautifully structured culinary guide.</p>
-        <span class="ebook-tag">PDF · Branding</span>
-        <div class="ebook-actions">
-          <a href="Recipes.pdf" target="_blank" class="btn-primary">View Ebook ↗</a>
+    <div class="web-card">
+      <img src="skill1.jpg" alt="SkillConnect">
+      <div class="web-info">
+        <p class="web-title">SkillConnect</p>
+        <p class="web-desc">Clean online class website built for seamless learning experiences.</p>
+        <span class="web-tag">UI/UX · HTML</span>
+        <div class="web-actions">
+          <a href="https://tinyurl.com/skillconnect1" target="_blank" class="btn-primary">View Website ↗</a>
         </div>
       </div>
     </div>
 
-    <div class="ebook-card">
-      <img src="growth.jpg" alt="The Self-Confidence Blueprint">
-      <div class="ebook-info">
-        <div class="ebook-genre">Self-Help</div>
-        <p class="ebook-title">The Self-Confidence Blueprint</p>
-        <p class="ebook-desc">Minimal and premium look. A practical guide to building lasting confidence and self-belief.</p>
-        <span class="ebook-tag">PDF · Content</span>
-        <div class="ebook-actions">
-          <a href="SelfConfidence.pdf" target="_blank" class="btn-primary">View Ebook ↗</a>
+    <div class="web-card">
+      <img src="cbt.jpg" alt="CBT Website">
+      <div class="web-info">
+        <p class="web-title">CBT Website</p>
+        <p class="web-desc">Modern CBT website with smooth navigation and animations for test practice.</p>
+        <span class="web-tag">HTML · UI</span>
+        <div class="web-actions">
+          <a href="https://tinyurl.com/unilesa-testpractice" target="_blank" class="btn-primary">View Website ↗</a>
         </div>
       </div>
     </div>
@@ -216,10 +202,10 @@
   </div>
 
   <div class="cta-block reveal">
-    <h2>Want Your Own Ebook?</h2>
-    <p>I design clean, professional and market-ready digital books that communicate your message and sell.</p>
+    <h2>Need a Website?</h2>
+    <p>I design and build websites that actually represent your brand and convert visitors into clients.</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20need%20an%20ebook%20design" target="_blank" class="btn-primary">📘 Start Your Project</a>
+      <a href="https://wa.me/2348169518870?text=Hi%20Amuda%20Oluwaferanmi%2C%20I%20need%20a%20website" target="_blank" class="btn-primary">🚀 Start Your Project</a>
       <a href="index.html#pricing" class="btn-ghost">View Pricing</a>
     </div>
   </div>
